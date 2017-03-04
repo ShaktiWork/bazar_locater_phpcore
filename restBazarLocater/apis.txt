@@ -1,0 +1,14 @@
+http://localhost/bazar_locater_phpcore/restBazarLocater/api.php?action=loadState
+http://localhost/bazar_locater_phpcore/restBazarLocater/api.php?action=loadCity&state=Karnataka
+
+http://localhost/bazar_locater_phpcore/restBazarLocater/api.php?action=loadRegion&state=Karnataka&city=Bangalore
+
+http://localhost/bazar_locater_phpcore/restBazarLocater/api.php?action=loadCategory
+
+
+http://localhost/bazar_locater_phpcore/restBazarLocater/api.php?action=loadSubCategory&category=Flight
+
+
+
+
+http://dazzlediva.in/bazar-locater/

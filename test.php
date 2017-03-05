@@ -11,7 +11,10 @@ class customException extends Exception {
 
 $email = "someone@example...com";
 
-try {
+try {  
+
+testing
+
   //check if
   if(filter_var($email, FILTER_VALIDATE_EMAIL) === FALSE) {
     //throw exception if email is not valid

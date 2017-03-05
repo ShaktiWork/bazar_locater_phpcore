@@ -1,0 +1,1473 @@
+/*
+Theme Name: Listify - Child Theme 
+Theme URI: http://astoundify.com/themes/listify
+Author: Astoundify
+Author URI: http://astoundify.com
+Description: Your beautiful handcrafted directory.
+Version: 1.0.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: listify-foursquare
+Domain Path: /languages/
+Tags: white, two-columns, one-column, right-sidebar, left-sidebar, responsive-layout, custom-background, custom-header, theme-options, full-width-template, featured-images, flexible-header, custom-menu, translation-ready
+Template: listify
+*/
+
+.entry-cover.has-image:after, .listing-cover.has-image:after{background: none !important;}
+#menu-need-help-menu li:first-child a {
+    color: #a1a714;
+}
+#menu-need-help-menu li:first-child {
+    margin-right: 10px;
+}
+#menu-need-help-menu li:last-child a {
+    color: #882345;
+}
+#menu-need-help-menu li:last-child {
+    border-left: 2px solid #882345;
+    padding-left: 10px;
+    margin: 0;
+}
+#menu-need-help-menu li a {
+    margin: 0;
+    padding: 0;
+}
+.search-overlay, .primary-header {
+    background-color: rgba(255,255,255,0.9);
+}
+#masthead{width: 100%; position: absolute; margin-top: 8px;}
+.job_listings {
+    margin-top: 90px;
+}
+.socialicons {
+    text-align: left;
+    padding-top: 14px;
+}
+.socialicons img {
+    height: 42px !important;
+    width: 42px !important;
+}
+.socialicons a {
+    margin: 0 !important;
+}
+.primary{padding: 0 !important;}
+.site-branding {
+    padding-left: 150px;
+}
+.homep {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    position: relative;
+    top: -50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.cover-wrapper.container {
+    min-height: 385px;
+}
+#menu-secondary li > a {
+    color: #646464;
+    padding: 0 10px;
+}
+#menu-secondary li {
+    border-right: 2px solid #646464;
+    margin: 0;
+}
+#menu-secondary li:last-child {
+    border: medium none;
+}
+.menuabove_slide {
+    width: 70%; float: left;
+}
+.appcontainer {
+    float: left;
+    text-align: right;
+    width: 30%;
+}
+.secondary.nav-menu {
+    padding-top: 5px;
+}
+.homepage-hero-style-image {
+    margin-top: -30px; padding: 0;
+}
+.inner_container_left {
+    float: left; border-right: 1px solid #aaaaaa; padding-right: 18px; min-height: 1350px;
+    width: 85%;
+}
+.inner_container_right {
+    float: left;
+    text-align: right;
+    width: 14%;
+}
+.homewdg img {
+    margin-bottom: 15px; cursor: pointer;
+}
+.responslider {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+}
+.rslides.rslides1 {
+    max-width: 100% !important;
+}
+.rslides li img {
+    border-radius: 10px;
+}
+.rslides_container {
+    margin-bottom: 10px;
+}
+.home-widgett > h1 {
+    border-bottom: 1px solid;
+    color: #0046ad;
+    padding-bottom: 7px;
+}
+.job_listing-entry-meta {
+    background-color: rgba(221, 100, 32, 0.7);
+    font-size: 15px;
+    font-weight: normal !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    width: 100% !important;
+}
+.job_listing-title {
+    font-size: 16px !important;
+    font-weight: normal !important;
+    padding: 7px 0;
+}
+.job_listing-entry-header-wrapper {
+    left: 0 !important; bottom: 15px !important;
+    right: 0 !important;
+}
+.site-footer {
+    background-color: #333333;
+    padding: 12px 0;
+}
+.futmenu li a {
+    color: #c8c8c8;
+    padding: 0 !important;
+}
+.futmenu li {
+    border-right: 1px solid #c8c8c8;
+    margin-right: 6px !important;
+    padding-right: 10px;
+}
+.futmenu li:last-child {
+    border: medium none;
+}
+.futsocial {
+    float: left;
+    text-align: right;
+    width: 30%;
+}
+.footermenu {
+    float: left;
+    padding-top: 5px;
+    width: 70%;
+}
+.container {
+    padding: 0;
+}
+.futsocial a img {
+    height: 30px !important;
+    width: 30px !important;
+}
+.site-footer {
+    background-color: #333333;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 12px 0 0;
+}
+.footer-wrapper {
+    background-color: #333333;
+}
+.site-info {
+    background-color: #333333; padding-top: 15px; font-size: 12px;
+    color: #c8c8c8;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.site-footer .container {
+    padding-bottom: 10px;
+}
+.futsocial a {
+    height: auto !important;
+    margin: 0 !important;
+    width: 35px !important;
+}
+.citylist {
+    color: #c8c8c8;
+    display: inline-block;
+    padding-left: 90px;
+    padding-top: 20px;
+    vertical-align: top;
+    width: 68%;
+}
+.futapp {
+    display: inline-block;
+    padding-right: 65px;
+    text-align: right;
+    width: 30%;
+}
+.futapp img {
+    margin-top: 10px;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1022; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fecb00; color: #862246;
+    border: 1px solid #888;
+    bottom: 0;
+    height: 200px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+.close {
+    border: 1px solid;
+    border-radius: 16px;
+    color: gray;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    height: 30px;
+    margin-right: 5px;
+    margin-top: 3px;
+    padding-top: 0;
+    text-align: center;
+    width: 30px;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.coll {
+    padding-left: 130px; height: 100%;
+    padding-top: 10px; display: inline-block;
+}
+.coll > p {
+    font-size: 18px;
+}
+.step1 {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/08/signup1-1.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.step2{
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/08/8.Bazaar-Locator-company-Sign-up-step2.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.step3{
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/08/9.Bazaar-Locator-company-Sign-up-step3.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.step4{
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/08/name.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.step5{
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/08/email.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.step6{
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/08/name.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.successbox{
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/08/13.Bazaar-Locator-company-Sign-up-congrats.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.login_step{
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/login.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 100%; margin: 0 auto;
+    width: 85%;
+}
+.cong {
+    font-size: 24px !important;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.home-widget {
+    margin-top: 0;
+}
+.nare {
+    border-bottom: 1px solid;
+    margin: 0 auto 12px;
+    text-align: center;
+    width: 80%;
+}
+.needhelp{width: 50%; float: left; text-align: right; padding-right: 12px;}
+.needhome{width: 50%; float: left; text-align: left; padding-left: 12px;}
+.needhelp p {
+    color: #882345;
+    padding-right: 5px;
+}
+.needhome p {
+    padding-left: 20px; color: #882345;
+}
+.col1 {
+    width: 70%; float: left;
+}
+.col2 {
+    float: left;
+    padding-top: 20px;
+    text-align: right;
+    width: 27%;
+}
+.col2 > p {
+    font-size: 18px;
+}
+.prv {
+    border: 1px solid; cursor: pointer;
+    border-radius: 18px;
+    display: inline-block;
+    font-size: 25px;
+    height: 35px;
+    margin-right: 12px;
+    text-align: center;
+    width: 35px;
+}
+.nxt{
+    border: 1px solid; cursor: pointer;
+    border-radius: 18px;
+    display: inline-block;
+    font-size: 25px;
+    height: 35px;
+    text-align: center;
+    width: 35px;
+}
+.commonclass {
+    -moz-border-bottom-colors: none; 
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fecb00;
+    border-color: -moz-use-text-color -moz-use-text-color #86223e;
+    border-image: none;
+    border-radius: 0; 
+    border-style: none none solid; color: #86223e;
+    border-width: medium medium 1px;
+}
+.home-widget .textwidget > img {
+    margin-bottom: 30px;
+}
+.login_col {
+    float: left;
+    width: 80%;
+}
+.login_common {
+    background-color: #fecb00;
+    border-color: -moz-use-text-color;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    margin-right: 15px;
+    width: 45%;
+}
+.sbmt_wrap {
+    float: left;
+    width: 100%;
+}
+.logindiv {
+    float: left;
+    padding-right: 7%;
+    text-align: right;
+    width: 50%;
+}
+.forgot_signup {
+    float: left;
+    width: 50%;
+}
+.sbmt_wrap {
+    float: left;
+    width: 100%;
+}
+.forgot_signup > a {
+    color: #862246;
+    font-size: 15px;
+}
+.logindiv > input {
+    background-color: #862246;
+    height: 35px;
+    padding-top: 9px;
+}
+.loggedin {
+    background: #0146ad none repeat scroll 100% center;
+    float: right;
+    font-size: 17px;
+    text-align: right;
+    width: 75%;
+}
+.loggedin > p:first-child {
+    border-bottom: 1px solid #fff;
+}
+.loggedin span {
+    color: #fecb00;
+}
+.loggedin > p {
+    margin-bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+}
+.loggedin > p {
+    margin-bottom: 0;
+    padding-top: 5px;
+    text-align: center;
+}
+.site-brand {
+    text-align: left;
+}
+#loginhead{background-color: #0146AD;}
+.coverimg {
+    border-bottom: 1px solid #c75b13;
+    padding: 5px 12px;
+    text-align: center; display: none;
+}
+.result_div {
+    padding-top: 30px;
+}
+.coverimg > img {
+    height: 140px;
+    width: 87%;
+}
+.profile_info_container {
+    border-bottom: 1px solid; width: 100%;
+    float: left;
+    padding: 15px 0;
+}
+.avator {
+    float: left;
+    text-align: center;
+    width: 20%;
+}
+.profile_info {
+    float: left;
+    width: 80%;
+}
+.avator > img {
+    border: 1px solid #c75f16;
+    border-radius: 80px;
+    height: 150px;
+    width: 150px;
+}
+.nam h1 {
+    color: #0146ad;
+    font-style: italic;
+    margin: 0;
+    text-align: left;
+}
+.name_cont {
+    border-bottom: 1px solid;
+    float: left;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.profile_info > p {
+    color: #000;
+    float: left; width: 100%; 
+    font-size: 18px;
+    padding-top: 12px;
+    text-align: left;
+}
+.like {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/like-1.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 50px 45px;
+    float: right;
+    font-size: 22px;
+    height: 50px; color: #8f9300;
+    padding-left: 55px;
+    padding-top: 12px;
+    text-align: left;
+    width: 15%;
+}
+.favv {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/fav-1.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 50px 45px;
+    float: right;
+    font-size: 22px;
+    height: 50px; color: #c30046;
+    padding-left: 55px;
+    padding-top: 12px;
+    text-align: left;
+    width: 15%;
+}
+.revv {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/edit-1.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 50px 45px;
+    float: right;
+    font-size: 22px;
+    height: 50px; color: #882446;
+    padding-left: 55px;
+    padding-top: 12px;
+    text-align: left;
+    width: 15%;
+}
+.nam {
+    float: left;
+    width: 50%;
+}
+.editcont {
+    float: left; text-align: right;
+    width: 50%;
+}
+.editcont > a {
+    border: 1px solid #c75f16; margin-left: 5px;
+    border-radius: 6px;
+    color: #c75f16;
+    font-size: 16px;
+    padding: 4px 7px;
+}
+.list_container {
+    border-bottom: 1px solid;
+    float: left;
+    padding-top: 18px;
+    width: 100%;
+}
+.listcount > p {
+    color: #0146ab; margin-bottom: 10px;
+    font-size: 22px;
+}
+.listbtn > a {
+    background-color: #c75b12; font-size: 18px;
+    border-radius: 8px;
+    color: #fed200;
+    padding: 10px 18px;
+}
+.listcount {
+    float: left;
+    width: 50%;
+}
+.listbtn {
+    float: left; text-align: right;
+    width: 50%;
+}
+.job-manager-message {
+    float: left;
+    width: 100%;
+}
+.info_container {
+    float: left; margin-bottom: 18px;
+    margin-top: 8px;
+    width: 100%;
+}
+.info_container > ul {
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+.info_container li {
+    border-right: 2px solid #c75b13;
+    cursor: pointer;
+    float: left; font-weight: bold;
+    font-size: 15px;
+    list-style: outside none none;
+    padding: 4px 10px;
+    text-align: center;
+    width: 16.5%;
+}
+.binfo_container {
+    float: left;
+    width: 100%;
+}
+.cinfo_container {
+    float: left;
+    width: 100%;
+}
+.cinfo_container > p {
+    color: #009a74;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.linfo_container {
+    float: left;
+    width: 100%;
+}
+.linfo_container > p {
+    color: #8f9300;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.oinfo_container {
+    float: left;
+    width: 100%;
+}
+.oinfo_container > p {
+    color: #0045ad;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.kinfo_container {
+    float: left; padding-top: 22px;
+    width: 100%;
+}
+.kinfo_container > p {
+    color: #c20144;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.kinfospan span {
+    width: 98%;
+}
+.uinfo_container {
+    float: left; padding-top: 25px;
+    width: 100%;
+}
+.uinfo_container > p {
+    color: #4f2d81;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.binfo_container > p {
+    color: #c75b13;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+.halfdiv {
+    float: left; padding-bottom: 18px; min-height: 65px;
+    width: 50%;
+}
+.halfdiv select {
+    border: 1px solid;
+    border-radius: 7px;
+    width: 100%;
+}
+.halfdiv span {
+    width: 75%;
+}
+.halfdiv input {
+    border: 1px solid;
+    border-radius: 7px;
+    width: 75%;
+}
+.fulldiv {
+    float: left; margin-bottom: 25px;
+    width: 100%;
+}
+.fulldiv select {
+    border: 1px solid;
+    border-radius: 7px;
+}
+.fulldiv input {
+    border: 1px solid; min-height: 46px; margin-right: 15px; width: 31%;
+    border-radius: 7px;
+}
+.ph91 span {
+    background-color: #c8c8c8;
+    border-radius: 7px 0 0 7px;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 5px;
+}
+.ph91 input {
+    border-radius: 0 7px 7px 0;
+    width: 68.5%;
+}
+.info_save {
+    background-color: #c75b12 !important;
+    float: right;
+    font-weight: bold !important;
+}
+.fulldiv span {
+    margin-right: 15px;
+}
+.binfo {
+    color: #c75b13;
+}
+.cinfo {
+    color: #009a74;
+}
+.linfo {
+    color: #8f9300;
+}
+.oinfo {
+    color: #0045ad;
+}
+.kinfo {
+    color: #c20144;
+}
+.uinfo {
+    color: #4f2d81;
+}
+.saved {
+    color: green;
+    font-size: 16px;
+    display: none;
+    text-align: right;
+    font-weight: bold;
+    float: right;
+    margin-right: 90px;
+    width: 100%;
+}
+.b_Phone_error{color: red; font-size: 16px;
+    display: none;
+    text-align: right;
+    font-weight: bold;
+    float: right;
+    margin-right: 90px;
+    width: 100%; }
+.b_Email_error{color: red; font-size: 16px;
+    display: none;
+    text-align: right;
+    font-weight: bold;
+    float: right;
+    margin-right: 90px;
+    width: 100%; }
+.info_container li:last-child{border: none;}
+p.working {
+    font-size: 16px;
+    font-weight: bold;
+}
+.working_div {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.working_div > div {
+    float: left;
+}
+.working_div .check {
+    float: left;
+    text-align: left;
+    width: 23%;
+}
+.time select {
+    min-width: 85px !important;
+    padding: 10px 5px;
+}
+.time span {
+    min-width: 85px;
+    padding: 0 !important;
+}
+.time {
+    padding-right: 4px;
+}
+.check > input {
+    width: auto;
+}
+.check {
+    padding-top: 9px;
+}
+.check_close {
+    padding-top: 12px;
+    width: 25%;
+}
+.check_close > input {
+    width: auto;
+}
+.paymentmode {
+    float: left;
+    margin-bottom: 12px;
+    width: 100%;
+}
+.paymentmode input {
+    width: auto;
+}
+.paymentmode > div {
+    float: left;
+    width: 33%;
+}
+.serve {
+    font-size: 16px;
+    font-weight: bold;
+}
+.per2person {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/5.Bazaar-Locator-retailer-login-others.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    width: 40%;
+}
+.per2person > input {
+    margin-left: 45px;
+    width: 60%;
+}
+.estimate_time {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/gadi.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    float: left;
+    padding-left: 50px;
+    width: 60%;
+}
+#upload_menu {
+    border: medium none;
+}
+.estimate_time > input {
+    float: left;
+    width: auto;
+}
+#keyword_cat {
+    width: 100%;
+}
+#keywords {
+    width: 100%;
+}
+.keyspan span {
+    width: 50%;
+}
+.uploadp {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.account-sign-in {
+    display: none;
+}
+.listing_container {
+    float: left; padding-top: 18px;
+    width: 100%;
+}
+.listing_page_review {
+    border-bottom: 1px solid;
+}
+.listing_page_review > p {
+    color: #882345;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.listing_page_fav {
+    border-bottom: 1px solid;
+}
+.listing_page_like {
+    border-bottom: 1px solid;
+}
+.listing_page_fav > p {
+    color: #c30046;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.listing_page_like > p {
+    color: #8F9300;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.favleft h2 {
+    color: #0146ad; margin-top: 18px;
+}
+.fav_common_box {
+    border-bottom: 1px solid;
+    float: left;
+    width: 100%;
+}
+.favleft {
+    float: left;
+    width: 90%;
+}
+.favright {
+    float: left;
+    padding-right: 5px;
+    padding-top: 40px;
+    text-align: right;
+    width: 10%;
+}
+.favright > a {
+    color: #c20046;
+    text-decoration: underline;
+}
+.likeright {
+    float: left;
+    padding-right: 5px;
+    padding-top: 40px;
+    text-align: right;
+    width: 10%;
+}
+.likeright > a {
+    color: #c20046;
+    text-decoration: underline;
+}
+.favleft > p {
+    color: #000;
+}
+.single_job_listing .listing-cover {
+    background-repeat: no-repeat; z-index: 0 !important;
+    background-size: 100% 400px;
+    height: 400px !important;
+    padding: 0;
+}
+.fav_like_container {
+    background-color: rgba(199, 91, 19, 0.8);
+    margin-top: 10px;
+    padding: 7px 80px;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+.fav_like_container div {
+    float: left; width: 49%;
+}
+.fav_like_left {
+    text-align: left;
+}
+.fav_like_right {
+    overflow: hidden;
+    padding-top: 6px;
+    text-align: right;
+}
+.fav_like_left h2 {
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.fav_like_right img {
+    height: 37px;
+    width: 35px;
+}
+.fav_like_right > a {
+    padding: 4px;
+}
+.banjo img {
+    border: 3px solid #c75b13;
+    border-radius: 5px;
+    height: 272px;
+    position: relative;
+    top: -100px;
+}
+.phoneweb_left {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/phone.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    color: #000;
+    float: left;
+    font-size: 18px;
+    padding-left: 36px;
+    padding-top: 10px;
+    width: 70%;
+}
+.phoneweb_right {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/www.jpg");
+    background-position: left 5px;
+    background-repeat: no-repeat;
+    color: #000;
+    float: left;
+    font-size: 18px;
+    padding-left: 36px;
+    padding-top: 10px;
+    width: 30%;
+}
+.phone_web_container {
+    float: left;
+    width: 100%;
+}
+.single_job_listing {
+    color: #000;
+}
+.addhome {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/home.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    font-size: 18px;
+    padding-left: 36px;
+    padding-top: 0px;
+    width: 100%;
+}
+.icon_map {
+    border-left: 1px solid;
+    color: #0047ad;
+    font-weight: bold;
+    padding-left: 5px;
+}
+.addhome img {
+    border: medium none;
+    height: auto;
+    top: -7px;
+}
+.deliver {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/gaddi.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    font-size: 18px;
+    padding-left: 40px;
+    padding-top: 6px;
+    width: 100%;
+}
+.deliver a {
+    background-color: #882345;
+    border-radius: 6px;
+    color: #fff;
+    float: right;
+    padding: 4px 7px;
+}
+.addhome > p {
+    margin-bottom: 12px;
+}
+.banjo_div {
+    float: left; height: 215px;
+    width: 23%;
+}
+.banjo {
+    border-bottom: 1px solid #882345;
+    min-height: 180px;
+    padding: 0 105px;
+}
+.banjo_div_right {
+    float: left;
+    padding-left: 8px;
+    width: 77%;
+}
+.right_sidebar_single {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #882345;
+    border-left: 1px solid #882345;
+    border-radius: 0 0 5px 5px;
+    border-right: 1px solid #882345;
+    float: left;
+    min-height: 500px;
+    width: 30%;
+}
+.single_middle_container {
+    float: left;
+    width: 70%; padding-left: 20px; 
+}
+.sendenquiry > a {
+    color: #882345;
+    font-weight: bold;
+}
+.writereview > a {
+    color: #882345;
+    font-weight: bold;
+}
+.sendenquiry {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/enquiry.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #a9a9a9;
+    font-size: 16px;
+    margin-top: 20px;
+    padding-bottom: 22px;
+    padding-left: 55px;
+    padding-top: 5px;
+}
+.writereview {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/editt.jpg");
+    background-position: 9px top;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #a9a9a9;
+    font-size: 16px;
+    margin-top: 18px;
+    padding-bottom: 22px;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+.pricerange {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/bagg.jpg");
+    background-position: 9px top;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #a9a9a9;
+    color: #882345;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 12px;
+    padding-bottom: 25px;
+    padding-left: 55px;
+    padding-top: 15px;
+}
+#accordion h3.ctt {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/cat.jpg");
+    background-position: 10px top;
+    background-repeat: no-repeat;
+    color: #882345;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+#accordion h3.funcy {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/fun.jpg");
+    background-position: 10px top;
+    background-repeat: no-repeat;
+    color: #882345;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+#accordion h3.vserve {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/ser.jpg");
+    background-position: 10px top;
+    background-repeat: no-repeat;
+    color: #882345;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+#accordion h3.paymod {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/card.jpg");
+    background-position: 10px top;
+    background-repeat: no-repeat;
+    color: #882345;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    padding-top: 10px;
+}
+#accordion h3.olac {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/other.jpg");
+    background-position: 10px top;
+    background-repeat: no-repeat;
+    color: #882345;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    padding-top: 10px; border: medium none;
+}
+#accordion div:last-child{border: none !important;}
+#accordion div {
+    border-bottom: 1px solid #a9a9a9;
+    padding-left: 15px;
+}
+.ui-accordion-content > p {
+    margin-bottom: 12px;
+}
+#accordion h3 {
+    border-bottom: 1px solid #a9a9a9; cursor: pointer;
+    padding-bottom: 25px !important;
+}
+#accordion h3:last-child{ border: none !important; padding-bottom: 15px !important; }
+.downkey {
+    background-image: url("http://inspironsoft.in/bazaar/wp-content/uploads/2016/09/downarrow.jpg");
+    background-repeat: no-repeat;
+    float: right;
+    height: 30px;
+    width: 30px;
+}
+.tme {
+    float: right;
+    padding-right: 60px;
+}
+.divgallery > img {
+    border-radius: 6px;  padding-top: 15px;
+    width: 100%;
+}
+.divgallery {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 12px;
+}
+.single_content_box > h2 {
+    color: #c75b12;
+}
+a:visited, a:focus, a:active, a:hover{
+    outline:0 none !important;
+}
+.resend {
+    float: left;
+    width: 100%;
+}
+.resendcode {
+    color: #882345;
+    font-size: 16px;
+    text-decoration: underline;
+    vertical-align: top;
+}
+#submitcode {
+    background-color: #882345;
+    float: right;
+    font-weight: bold;
+    padding: 5px 12px;
+}
+.otpsent {
+    color: green;
+    display: inherit;
+}
+.change_password_container {
+    float: left;
+    width: 100%; padding-top: 10px;
+}
+.change_password_container p {
+    margin-bottom: 10px;
+}
+.job-manager-form {
+    float: left; padding-top: 25px;
+    width: 100%;
+}
+#submit-job-form fieldset:first-child{display: none;}
+fieldset small {
+    display: none !important;
+}
+#submit-job-form fieldset {
+    float: left !important;
+    height: 70px;
+    margin: 0;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    width: 50%;
+}
+fieldset select{border: 1px solid;}
+.fieldset-job_category #job_category {
+    width: 100%;
+}
+.fieldset-job_category span {
+    width: 95%;
+}
+.intl-tel-input {
+    width: 95%;
+}
+fieldset input {
+    width: 95% !important;
+}
+#person_first_name {
+    margin-top: 16px;
+}
+#submit-job-form > p {
+    float: left; padding-top: 20px;
+    width: 100%;
+}
+.fieldset-job_location {
+    height: 300px !important;
+}
+.fieldset-payment_accepted {
+    height: 135px !important;
+}
+.fieldset-job_description {
+    height: 250px !important;
+    width: 100% !important;
+}
+.fieldset-job_hours {
+    height: auto !important;
+    width: 100% !important;
+}
+.fieldset-featured_image {
+    width: 100% !important; height: auto !important;
+}
+.fieldset-company_avatar {
+    width: 100% !important; height: auto !important;
+}
+.fieldset-company_phone input {
+    width: 95% !important; height: auto !important;
+}
+.job-manager-error {
+    width: 100%;
+    float: left;
+    margin-top: 25px;
+}
+.fieldset-job_tags {
+    display: none !important;
+}
+.fieldset-gallery_images {
+    display: none !important;
+}
+.fieldset-company_website {
+    display: none !important;
+}
+.fieldset-phone {
+    display: none !important;
+}
+#submit-job-form h2 {
+    display: none !important;
+}
+.fieldset-company_video{display: none !important;}
+.fieldset-person_first_name {
+    margin-top: -15px !important;
+}
+.business-hour {
+    color: #000;
+    width: 95%;
+}
+.listify_widget_panel_listing_auhtor{display: none;}
+.sharehidebox {
+    display: none;
+}
+.result_list_ul li{list-style: none;}
+.formcontainer {
+    margin-top: 120px;
+}
+.level-1 {
+    display: none;
+}
+.fieldset-job_subcategory {
+    height: 125px !important;
+}
+.page-title {
+    display: none;
+}
+.product {
+    padding-top: 40px;
+}
+.comment-subscription-form {
+    display: none;
+}
+#menubox_container {
+    padding-bottom: 20px;
+}
+.fieldset-job_state{padding-left: 30px !important;}
+.fieldset-job_city,.fieldset-longitude,.fieldset-latitude{padding-left: 30px !important;}
+.noresult {
+    font-size: 18px;
+    padding: 20px;
+}
+.codeloader {
+    display: none;
+    float: right;
+    height: 25px;
+    margin-left: 10px;
+    width: 25px;
+}
+.registerloader {
+    display: none;
+    float: right;
+    height: 30px;
+    padding-top: 2px;
+    width: 30px;
+}
+#map-canvas {
+    height: 235px !important; 
+    width: 100% !important;
+}
+#job_category option[value=""] {
+    display: none !important;
+}
+/* Pagination */
+.pagination {
+    clear:both;
+    position:relative;
+    font-size:15px; /* Pagination text size */
+    line-height:13px;
+    z-index: 999;
+}
+ .pagination span, .pagination a {
+    display:block;
+    float:left;
+    margin: 2px 2px 2px 0;
+    padding:6px 9px 5px 9px;
+    text-decoration:none;
+    width:auto;
+    color:#000; /* Pagination text color */
+    background: #fff; /* Pagination non-active background color */
+    -webkit-transition: background .15s ease-in-out;
+    -moz-transition: background .15s ease-in-out;
+    -ms-transition: background .15s ease-in-out;
+    -o-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+
+.pagination a:hover{
+    color:#fff;
+    background: #2ea3f2; /* Pagination background on hover */
+}
+ 
+.pagination .current{
+    padding: 6px 9px 5px 9px;
+    background: #2ea3f2;
+    color: #fff;
+}
+/* Pagination */
+.advancelink {
+    padding-top: 15px;
+    text-align: center;
+}
+.icon_map a {
+    cursor: pointer;
+}
+.hidden-css{display: none;}
+#main > ul {
+    margin: 0;
+    padding-top: 30px;
+}
+#main li {
+    list-style: outside none none;
+}
+.citylist > a:hover {
+    color: #2854a1;
+}
+.citylist > a {
+    color: #c8c8c8; 
+}
+.custom_archive {
+    width: 100%;
+}
+.content-box{
+    background-color: #f0f0f0;
+    padding: 25px;
+}
+.job_filters{display: none;}
+.archive-job_listing-filter-title{display: none;}
+.fieldset-featured_image .description {
+    display: block !important;
+}
+.fieldset-company_avatar .description {
+    display: block !important;
+}
+.job_listings {
+    min-height: 500px;
+}
+
+@media (max-width: 991px){
+	#masthead{position: inherit;}
+}

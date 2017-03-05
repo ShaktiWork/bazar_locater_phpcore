@@ -1,0 +1,982 @@
+ <!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+<meta name="google-site-verification" content="7qJy8Y8ToNOCHDg2B-CijKN7OrVxl8D2LsRrU2sRD2g" />
+			
+	
+	<link rel="pingback" href="https://nestcleaning.com.au/xmlrpc.php" />
+
+		<!--[if lt IE 9]>
+	<script src="https://nestcleaning.com.au/wp-content/themes/Divi/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<title>Nest Cleaning | We clean your clock and everything else</title>
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Nest Cleaning &raquo; Feed" href="https://nestcleaning.com.au/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Nest Cleaning &raquo; Comments Feed" href="https://nestcleaning.com.au/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Nest Cleaning &raquo; HOME Comments Feed" href="https://nestcleaning.com.au/home/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/nestcleaning.com.au\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<meta content="NEST CLEANING v.1.0" name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='https://nestcleaning.com.au/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-parent-style-css'  href='https://nestcleaning.com.au/wp-content/themes/Divi/style.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='awesome-font-css-css'  href='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/font-awesome/css/font-awesome.min.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dncalendar-css-css'  href='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/plugin_cleaning/css/dncalendar-skin.min.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='msgbox-css-css'  href='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/plugin_cleaning/css/msgboxcss.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/style.css?ver=3.0.14' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-css-css'  href='https://nestcleaning.com.au/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes.css?ver=3.0.14' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-responsive-css-css'  href='https://nestcleaning.com.au/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes_responsive.css?ver=3.0.14' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='https://nestcleaning.com.au/wp-content/themes/Divi/includes/builder/styles/magnific_popup.css?ver=3.0.14' type='text/css' media='all' />
+<link rel='stylesheet' id='sccss_style-css'  href='https://nestcleaning.com.au/?sccss=1&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='testimonials_bxslider_css-css'  href='https://nestcleaning.com.au/wp-content/plugins/testimonialslider/css/jquery.bxslider.css?ver=4.7.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/plugin_cleaning/custom_javascripts.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/plugin_cleaning/dncalendar.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/plugin_cleaning/cal_cutom.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/nest-cleaning/plugin_cleaning/msgbox.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/plugins/testimonialslider/js/jquery.bxslider.min.js?ver=4.7.2'></script>
+<link rel='https://api.w.org/' href='https://nestcleaning.com.au/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nestcleaning.com.au/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://nestcleaning.com.au/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.2" />
+<link rel="canonical" href="https://nestcleaning.com.au/" />
+<link rel='shortlink' href='https://nestcleaning.com.au/' />
+<link rel="alternate" type="application/json+oembed" href="https://nestcleaning.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnestcleaning.com.au%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://nestcleaning.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnestcleaning.com.au%2F&#038;format=xml" />
+    <script>
+    jQuery(document).ready( function() {
+    jQuery('#postcode').keydown(function(e){
+     var code = (e.keyCode ? e.keyCode : e.which);
+     if (code == 13) {
+        e.preventDefault();
+        e.stopPropagation();
+        jQuery('#postcode_submit').trigger( "click" );;
+     }
+  });    
+    jQuery("#postcode_submit").click( function() {
+    //jQuery(this).attr('value','Searching....');
+    var get_zipcode = jQuery('#postcode').val();
+    var start_zipcode = '2000';
+    var last_zipcode = '2914';
+    //alert(get_zipcode.length);    
+    if(get_zipcode.length >= 4 && start_zipcode <= get_zipcode && last_zipcode >= get_zipcode){
+    jQuery('#postcode_error').html('Please wait while page redirect to servies page');
+    window.open("https://nestcleaning.com.au/service-booking/?postcode="+get_zipcode+"","_self")
+    jQuery('#postcode_error').html(results);
+    }
+     else if(get_zipcode.length > 4){
+    //jQuery(this).attr('value','Book Now'); 
+    jQuery('#postcode_error').html('invalid Zip Code..Zip Code Atlest 4 Digit');
+    }
+    else{
+        jQuery('#postcode_error').html('The entered Postcode is not yet covered by us. Try Again');
+    }
+ });//end if conditions   
+   jQuery('.cleaning_product').click(function(){
+   var servies_type = jQuery(this).attr('id'); //get service type like office ,commerical ,lease service
+         window.open("https://nestcleaning.com.au/booking/?cleantype="+servies_type+"","_self")
+ });    
+});// end ready functions.
+ </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />		<style id="theme-customizer-css">
+													.woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .woocommerce-message, .woocommerce-error, .woocommerce-info { background: #16bae1 !important; }
+			#et_search_icon:hover, .mobile_menu_bar:before, .mobile_menu_bar:after, .et_toggle_slide_menu:after, .et-social-icon a:hover, .et_pb_sum, .et_pb_pricing li a, .et_pb_pricing_table_button, .et_overlay:before, .entry-summary p.price ins, .woocommerce div.product span.price, .woocommerce-page div.product span.price, .woocommerce #content div.product span.price, .woocommerce-page #content div.product span.price, .woocommerce div.product p.price, .woocommerce-page div.product p.price, .woocommerce #content div.product p.price, .woocommerce-page #content div.product p.price, .et_pb_member_social_links a:hover, .woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before, .et_pb_widget li a:hover, .et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active, .et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active, .et_pb_gallery .et_pb_gallery_pagination ul li a.active, .wp-pagenavi span.current, .wp-pagenavi a:hover, .nav-single a, .posted_in a { color: #16bae1; }
+			.et_pb_contact_submit, .et_password_protected_form .et_submit_button, .et_pb_bg_layout_light .et_pb_newsletter_button, .comment-reply-link, .form-submit input, .et_pb_bg_layout_light .et_pb_promo_button, .et_pb_bg_layout_light .et_pb_more_button, .woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce input.button.alt, .woocommerce-page input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce-page #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button { color: #16bae1; }
+			.footer-widget h4 { color: #16bae1; }
+			.et-search-form, .nav li ul, .et_mobile_menu, .footer-widget li:before, .et_pb_pricing li:before, blockquote { border-color: #16bae1; }
+			.et_pb_counter_amount, .et_pb_featured_table .et_pb_pricing_heading, .et_quote_content, .et_link_content, .et_audio_content, .et_pb_post_slider.et_pb_bg_layout_dark, .et_slide_in_menu_container { background-color: #16bae1; }
+									a { color: #16bae1; }
+											.nav li ul { border-color: #0096ae; }
+							#top-header, #et-secondary-nav li ul { background-color: #16bae1; }
+																
+		
+					#top-menu li.current-menu-ancestor > a, #top-menu li.current-menu-item > a,
+			.et_color_scheme_red #top-menu li.current-menu-ancestor > a, .et_color_scheme_red #top-menu li.current-menu-item > a,
+			.et_color_scheme_pink #top-menu li.current-menu-ancestor > a, .et_color_scheme_pink #top-menu li.current-menu-item > a,
+			.et_color_scheme_orange #top-menu li.current-menu-ancestor > a, .et_color_scheme_orange #top-menu li.current-menu-item > a,
+			.et_color_scheme_green #top-menu li.current-menu-ancestor > a, .et_color_scheme_green #top-menu li.current-menu-item > a { color: #0096ae; }
+							#main-footer { background-color: #36404b; }
+											#main-footer .footer-widget h4 { color: #16bae1; }
+							.footer-widget li:before { border-color: #16bae1; }
+						#et-footer-nav .bottom-nav li.current-menu-item a { color: #16bae1; }										
+		
+																														
+		@media only screen and ( min-width: 981px ) {
+																																											.et-fixed-header#top-header, .et-fixed-header#top-header #et-secondary-nav li ul { background-color: #16bae1; }
+																			.et-fixed-header #top-menu li.current-menu-ancestor > a,
+				.et-fixed-header #top-menu li.current-menu-item > a { color: #16bae1 !important; }
+						
+					}
+		@media only screen and ( min-width: 1350px) {
+			.et_pb_row { padding: 27px 0; }
+			.et_pb_section { padding: 54px 0; }
+			.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper { padding-top: 81px; }
+			.et_pb_section.et_pb_section_first { padding-top: inherit; }
+			.et_pb_fullwidth_section { padding: 0; }
+		}
+		@media only screen and ( max-width: 980px ) {
+																				}
+		@media only screen and ( max-width: 767px ) {
+														}
+	</style>
+
+	
+	
+	<style id="module-customizer-css">
+			</style>
+
+	<link rel="shortcut icon" href="https://nestcleaning.com.au/wp-content/uploads/2016/12/favicon.png" /><style type="text/css" id="et-custom-css">
+.service_categaory h3 {
+    text-transform: capitalize;
+}
+.m_left {
+    float: left;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.m_right {
+    float: right;
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 40px;
+}
+#step6 h1 {
+    background-color: #2BA8BC;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+input[type="image"]{width:250px;}
+#after_submit .fa {
+    color: #20A4B9 !important;
+    padding-right: 8px;
+    font-size: 18px;
+}
+input[type="image"] {
+    width: 250px;
+    padding-top: 15px;
+}
+div#after_submit {
+    border-bottom: 1px dotted;
+}
+input.border {
+    border-color: red;
+    border: 1px solid red;
+    transition: transform 0.3s;
+}
+img.fa{
+    width: 115px;
+    height: 110px;
+}
+.today-date.active div {
+    color: #fff;
+}
+span.sp {
+    color: #16bae1;
+    font-weight: bold;
+}
+
+.subcharge {
+    padding-top: 15px;
+    text-align: center;
+    color: #16bae1;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#logo {max-height: 100%;}
+#postcode{
+background-clip: padding-box;
+    border-image: none;
+    border-radius: 30px 0 0 30px;
+    border-style: solid none solid solid;
+    color: #adb7c1;
+    float: left;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 200;
+    height: 60px;
+    padding: 0 1px;
+    text-indent: 30px;
+    width: 64%;
+}
+
+#postcode_submit{
+      background-clip: padding-box;
+    background-color: #16bae1;
+    border-color: #16bae1;
+    border-image: none;
+    border-radius: 0 30px 30px 0;
+    border-style: solid;
+    color: #fff;
+    float: left;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 200;
+    height: 60px;
+    line-height: 53px;
+    padding: 0 8px;
+    width: 35%;
+    cursor:pointer;
+}
+#postcode_error{    
+   font-size: 20px;
+    clear: both;
+    padding-top: 20px;
+    color: #0096ae;
+}
+.tslider blockquote p {
+      color: #fff !important;
+    font-weight: 600 !important;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background:#fff !important;}
+element.style {
+}
+.tslider blockquote footer{color:#fff !important;}
+.bx-wrapper .bx-controls-direction a{display:none;}
+.page-id-142 img
+{    border-radius: 139px !important;
+}
+
+.innerbox{ 
+width: 100%;
+    line-height: 37px !important;
+    margin-bottom: 18px !important;
+    background-color: #f5f5f5  !important;
+    border-radius: 7px !important;
+    color: #ccc !important;
+    padding-left: 16px !important;
+    font-size: 15px !important;
+    border-color: #f5f5f5 !important;
+}
+.page-id-144 textarea {
+  height: 117px !important;
+}
+.sendbtn{
+width: 100%;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 42px;
+    border-radius: 6px;
+    background-color: #16bae1;
+    border: 2px solid #16bae1;
+}
+.et_pb_blurb h4 {font-size:15px !important;}
+blockquote {
+    border-color: #16bae1;
+}
+#footer-widgets {
+    padding-top: 39px !important;}
+.footer-widget{padding-left:130px !important;
+margin-bottom: 25px !important;}
+#et_top_search {display:none !important;}
+
+.heading{
+  font-size: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+#unfurnished, #furnished, .left_bedroom, .right_bedroom{
+ text-align: center;
+float:left;
+width:50%;
+padding: 24px 0;
+cursor: pointer;
+}
+.service_categaory.active .fa {
+color: #fff;
+}
+.service_categaory.active {
+background-color: #16bae1;
+}
+.service_categaory.active h3{color: #fff;}
+.service_categaory.active .fa-check-circle{
+display:block !important;
+}
+.right_content {
+    font-size: 16px;
+    padding-left: 30px;
+}
+.select_service, .select_date, .select_loction, .total_amount{
+    padding: 10px 0;
+}
+.next_button ,.prev_button{
+    border: 2px solid #16bae1;
+    border-radius: 35px;
+    color: #16bae1;
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+    padding: 10px 0 !important;
+    text-align: center;
+    width: 20%;
+margin-top: 50px;
+}
+.prev_button.space {
+    float: left !important;
+}
+.step, .step_right{
+    border: 1px solid #16bae1;
+    border-radius: 4px;
+    padding: 20px;
+overflow: hidden;
+}
+.space{margin-bottom:20px;}
+.total_right {float: right;}
+.total_amount {font-size: 24px;}
+.input-group {
+    border-collapse: separate;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+}
+.input-group-addon, .input-group-btn {
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 1%;
+}
+.input-group-btn {
+    font-size: 0;
+    position: relative;
+    white-space: nowrap;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display: table-cell;
+}
+.glyphicon {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.3px;
+    position: relative;
+    top: 1px;
+}
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.btn-danger {
+    background-color: #16bae1;
+    border-color: #16bae1;
+    color: #fff;
+}
+.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
+    margin-right: -1px;
+}
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.input-group-btn > .btn {
+    position: relative;
+}
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #16bae1 !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+.input-group .form-control {
+    float: left;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+text-align: center;
+}
+.input-group-btn > .btn {
+    position: relative;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    margin-left: -1px;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.btn-success {
+    background-color: #16bae1;
+    border-color: #16bae1;
+    color: #fff;
+}
+
+.glyphicon-minus::before {
+    content: "−";
+ font-size: 17px;
+    font-weight: bold;
+}
+.glyphicon-plus::before {
+    content: "+";
+ font-size: 17px;
+    font-weight: bold;
+}
+
+.paragraph{
+padding: 30px 0;
+text-align: center;
+}
+
+#unfurnished:hover, #furnished:hover{
+    opacity: 1;
+    transform: translateY(8px);
+}
+
+.sub_category {
+    float: left;
+    text-align: center;
+    width: 30%;
+color: #16bae1;
+padding-top: 20px;
+margin-right: 16px;
+height:190px;
+}
+.sub_category:hover {
+background-color:#16bae1;
+color:#fff;
+border-radius: 6px;
+}
+.sub_category.active {
+background-color:#16bae1;
+color:#fff;
+border-radius: 6px;
+}
+.font {
+    font-size: 16px;
+color: #16bae1;
+}
+.sub_category:hover > .font{
+  color: #fff;
+}
+.sub_category.active > .font{
+  color: #fff;
+}
+
+
+.sub_category .fa.active {
+display: block !important;
+}
+.sub_category .fa.inactive {
+display: none !important;
+}
+div#get_time li {
+    list-style: none;
+    float: left;
+    width: 19%;
+ text-align: center;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 10px;
+    margin-left: 1%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+div#leave_key div {
+    width: 32%;
+    float: left;
+    text-align: center;
+    margin-left: 1%;
+    border: 1px solid;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#leave_key i.fa {
+    font-size: 25px;
+    margin-bottom: 13px;
+}
+td#calendarClick.active,#get_time li.active,#leave_key div.active {
+    background-color: #16bae1;
+    color: #fff;
+}
+  input#Others,input#home,input#key{  
+  width: 100%;
+    height: 50px;
+    margin-top: 14px;
+}
+input.fullwidth-input {
+    width: 100%;
+    height: 40px;
+}
+.one-third-input.pull-left {
+    width: 40%;
+    float: left;
+    margin-top: 15px;
+    height: 40px;
+}
+.two-third-input.pull-right {
+    float: right;
+    width: 58%;
+    margin-top: 15px;
+    height: 40px;
+}
+textarea {
+    width: 100%;
+    padding: 20px;
+    min-height: 110px;
+    color: #8f9ba9;
+    font-size: 15px;
+    border: 1px solid #dce2ea;
+    border-radius: 4px;
+    font-weight: 300;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+#field_1_4 .gfield_label, #field_1_9 .gfield_label {
+    display: none;
+}
+.gform_button.button {
+    background-color: #26B2C9;
+    border: 1px solid #26B2C9;
+    color: #fff;
+    padding: 10px;
+}
+@media (min-width: 240px) and (max-width: 767px) { 
+.next_button, .prev_button {
+    width: 100%;
+ margin-top: 20px;
+}
+#unfurnished, #furnished, .left_bedroom, .right_bedroom, .sub_category, div#get_time li {
+    width: 100%;
+}
+.footer-widget {
+    padding-left: 0 !important;
+}
+div#leave_key div {
+width: 100%;
+margin-bottom: 20px;
+}
+.right_content {
+    width: 83% !important;
+}
+ }
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+   opacity: 1;
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+.hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 0;
+    max-width: 230px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    margin-top: 5px;
+    height: 10px;
+    width: 100%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+</style></head>
+<body class="home page-template-default page page-id-17 et_pb_button_helper_class et_fixed_nav et_show_nav et_cover_background et_pb_gutter windows et_pb_gutters3 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_pb_footer_columns2 et_header_style_left et_pb_pagebuilder_layout et_right_sidebar et_divi_theme chrome">
+	<div id="page-container">
+
+	
+	
+		<header id="main-header" data-height-onload="66">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://nestcleaning.com.au/">
+						<img src="https://nestcleaning.com.au/wp-content/uploads/2017/01/logohome12-1.png" alt="Nest Cleaning" id="logo" data-height-percentage="54" />
+					</a>
+				</div>
+				<div id="et-top-navigation" data-height="66" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-1000000" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17 current_page_item menu-item-1000000"><a href="https://nestcleaning.com.au/">Home</a></li>
+<li id="menu-item-1000081" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1000081"><a href="http://nestcleaning.com.au/service-booking/">Services</a></li>
+<li id="menu-item-1000441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1000441"><a href="https://nestcleaning.com.au/about-us/">FAQ</a></li>
+<li id="menu-item-1000298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1000298"><a href="https://nestcleaning.com.au/contact-us/">Contact us</a></li>
+</ul>						</nav>
+					
+					
+					
+										<div id="et_top_search">
+						<span id="et_search_icon"></span>
+					</div>
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://nestcleaning.com.au/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+
+		<div id="et-main-area">
+<div id="main-content">
+
+
+			
+				<article id="post-17" class="post-17 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div class="et_pb_section  et_pb_section_0 et_pb_with_background et_section_regular">
+				
+				
+					
+					<div class=" et_pb_row et_pb_row_0">
+				
+				<div class="et_pb_column et_pb_column_4_4  et_pb_column_0">
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_0">
+				
+<h3><span style="font-family: 'Amatic SC'; font-size: xx-large;"><strong><span style="font-family: 'Poiret One';">NEST CLEANING</span></strong> </span></h3>
+
+			</div> <!-- .et_pb_text --><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_1">
+				
+<p><input id="postcode" name="postcode" type="number" placeholder="Enter Postcode" /><input id="postcode_submit" name="postcode_submit" type="submit" value="Book Now" /></p>
+<div id="postcode_error"></div>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+					
+			</div> <!-- .et_pb_row -->
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_1 et_section_regular">
+				
+				
+					
+					<div class=" et_pb_row et_pb_row_1">
+				
+				<div class="et_pb_column et_pb_column_4_4  et_pb_column_1">
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_2">
+				
+<p><span style="color: #000000; font-size: xx-large;"><span style="font-family: 'Poiret One';">OUR PROMISES</span></span></p>
+<h1><span style="font-size: large; color: #666666; font-family: Abel;">Nest cleaning is a platform connecting your cleaning services with experienced cleaners. With our easy booking process, and secure payment, and money -back gurantee, <span style="background-color: #ffffff;">Nest cleaning</span> is the one you can trust.</span></h1>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+					
+			</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_2">
+				
+				<div class="et_pb_column et_pb_column_1_3  et_pb_column_2">
+				
+				<div class="et_pb_module et-waypoint et_pb_image et_pb_animation_left et_pb_image_0 et_always_center_on_mobile">
+				<img src="https://nestcleaning.com.au//wp-content/uploads/2014/10/pepole-3.png" alt="" />
+			
+			</div><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_3">
+				
+<h3 style="color: #666666;"><span style="font-size: large;"><strong><span style="font-family: 'Poiret One';">TRUSTED PROFESSIONALS</span></strong></span></h3>
+<p style="text-align: center;"><span style="font-family: Abel; font-size: large;">Our professionals are experienced, back-ground checked, and insured.</span></p>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_3">
+				
+				<div class="et_pb_module et-waypoint et_pb_image et_pb_animation_left et_pb_image_1 et_always_center_on_mobile">
+				<img src="https://nestcleaning.com.au//wp-content/uploads/2014/10/pepole2.png" alt="" />
+			
+			</div><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_4">
+				
+<h2 style="color: #666666;"><span style="font-family: 'Poiret One'; font-size: large;"><strong>NEXT-DAY AVAILABILITY</strong></span></h2>
+<p><span style="font-family: Abel; font-size: large;">Book your cleaning serivce for as early as tomorrow.</span></p>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_4">
+				
+				<div class="et_pb_module et-waypoint et_pb_image et_pb_animation_left et_pb_image_2 et_always_center_on_mobile">
+				<img src="https://nestcleaning.com.au//wp-content/uploads/2014/10/pepole4.png" alt="" />
+			
+			</div><div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_5">
+				
+<h2 style="color: #666666;"><span style="font-family: 'Poiret One'; font-size: large;"><strong>MONEY-BACK GURANTEE</strong></span></h2>
+<p><span style="font-family: Abel; font-size: large;">If you are not satisfied with our serivce, we will refund your money.</span></p>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+					
+			</div> <!-- .et_pb_row -->
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section  et_pb_section_2 et_pb_with_background et_section_regular">
+				
+				
+					
+					<div class=" et_pb_row et_pb_row_3">
+				
+				<div class="et_pb_column et_pb_column_4_4  et_pb_column_5">
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_center  et_pb_text_6">
+				
+<p><strong><span style="font-family: 'Poiret One'; font-size: xx-large;">HOW</span><span style="font-family: 'Poiret One'; font-size: xx-large;"> IT WORKS</span></strong></p>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+					
+			</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_4">
+				
+				<div class="et_pb_column et_pb_column_1_3  et_pb_column_6">
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_7">
+				
+<p><strong><span style="font-family: 'Poiret One'; font-size: x-large;">1. PICK A TASK</span></strong></p>
+<p><span style="font-size: large;">Choose from a list of our serivces</span></p>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_7">
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_8">
+				
+<p><span style="font-family: 'Poiret One'; font-size: x-large;"><strong>2. GET MATCHED</strong></span></p>
+<p><span style="font-size: large;">We&#8217;ll connect you with our professionals within minutes of your request</span></p>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3  et_pb_column_8">
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_9">
+				
+<p><strong><span style="font-family: 'Poiret One'; font-size: x-large;">3. GET IT DONE</span></strong></p>
+<p><span style="font-size: large;">We&#8217;ll send our professionals to your doorstep as early as tomorrow, completes the job and bills directly online</span></p>
+
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+					
+			</div> <!-- .et_pb_row --><div class=" et_pb_row et_pb_row_5">
+				
+				<div class="et_pb_column et_pb_column_4_4  et_pb_column_9">
+				
+				<div class="et_pb_button_module_wrapper et_pb_module et_pb_button_alignment_center">
+				<a class="et_pb_button  et_pb_button_0 et_pb_module et_pb_bg_layout_light" href="http://nestcleaning.com.au//service-booking/">GET STARTED</a>
+			</div>
+			</div> <!-- .et_pb_column -->
+					
+			</div> <!-- .et_pb_row -->
+				
+			</div> <!-- .et_pb_section -->
+					</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+
+
+			<footer id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+	<div class="footer-widget"><div id="text-3" class="fwidget et_pb_widget widget_text"><h4 class="title">CONTACT US</h4>			<div class="textwidget"><strong> Address</strong>: 203 Commonwealth street, Surry Hills, 2010 <br />
+<strong> Phone:</strong> +61 424 905 885 <br />
+<strong> Email: </strong>info@nestcleaning.com <br /></div>
+		</div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"><div id="nav_menu-3" class="fwidget et_pb_widget widget_nav_menu"><h4 class="title">SERVICES</h4><div class="menu-services-container"><ul id="menu-services" class="menu"><li id="menu-item-1000305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1000305"><a href="http://nestcleaning.com.au/commercial-cleaning/">Commercial Cleaning</a></li>
+<li id="menu-item-1000073" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1000073"><a href="http://nestcleaning.com.au/booking/?cleantype=home">Home Cleaning</a></li>
+<li id="menu-item-1000367" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1000367"><a href="http://nestcleaning.com.au/booking/?cleantype=lease">End Of Lease Clean</a></li>
+</ul></div></div> <!-- end .fwidget --></div> <!-- end .footer-widget -->	</div> <!-- #footer-widgets -->
+</div>	<!-- .container -->
+
+		
+				<div id="et-footer-nav">
+					<div class="container">
+											</div>
+				</div> <!-- #et-footer-nav -->
+
+			
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<ul class="et-social-icons">
+
+
+</ul><p id="footer-info">@Copyright 2016 Nest cleaning </p>					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+	<style type="text/css" id="et-builder-advanced-style">
+				
+body #page-container .et_pb_button_0 { 
+					
+					
+					
+					
+					letter-spacing:0px;
+					font-size:20px; }
+.et_pb_section_2 { background-image:url(https://nestcleaning.com.au//wp-content/uploads/2016/12/IMG_319186.jpg); }
+body #page-container .et_pb_button_0:hover { 
+					
+					
+					
+					letter-spacing:0px;
+					padding-left:0.7em; padding-right: 2em; }
+body #page-container .et_pb_button_0:hover:after { 
+						
+						opacity: 1; }
+body.et_button_custom_icon #page-container .et_pb_button_0:after { font-size:20px; }
+body #page-container .et_pb_button_0:after { font-size:32px; 
+						
+						
+						opacity:0; }
+.et_pb_section_2.et_pb_section { background-color:#f9f9f9 !important; }
+.et_pb_image_2 { text-align: center; }
+.et_pb_text_0.et_pb_text { color: #16bae1 !important; }
+.et_pb_text_0 h1 { font-family: 'Roboto Condensed', Helvetica, Arial, Lucida, sans-serif;font-size: 36px; color: #16bae1 !important; }
+.et_pb_text_0 { font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;font-size: 36px; margin-top: 90px !important; max-width: 700px; }
+.et_pb_text_1 { max-width: 700px; }
+.et_pb_image_1 { text-align: center; }
+.et_pb_image_0 { text-align: center; }
+.et_pb_section_0 { background-image:url(https://nestcleaning.com.au//wp-content/uploads/2016/12/bedroom-with-a-view.jpg); }
+
+@media only screen and ( min-width: 981px ) {
+	.et_pb_row_3.et_pb_row { padding-top: 50px; padding-right: 0px; padding-bottom: 20px; padding-left: 0px; }
+	.et_pb_row_5.et_pb_row { padding-top: 25.25px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
+	.et_pb_section_2.et_pb_section { padding-top: 0px; padding-right: 0px; padding-bottom: 22px; padding-left: 0px; }
+	.et_pb_row_1.et_pb_row { padding-top: 22px; padding-right: 0px; padding-bottom: 20.125px; padding-left: 0px; }
+	.et_pb_section_1.et_pb_section { padding-top: 69px; padding-right: 0px; padding-bottom: 77px; padding-left: 0px; }
+	.et_pb_section_0.et_pb_section { padding-top: 0px; padding-bottom: 100px; }
+}
+
+@media only screen and ( max-width: 980px ) {
+	body #page-container .et_pb_button_0:hover { letter-spacing:0px; }
+	body #page-container .et_pb_button_0,body #page-container .et_pb_button_0:after { 
+								letter-spacing:0px; }
+}
+
+@media only screen and ( max-width: 767px ) {
+	body #page-container .et_pb_button_0:hover { letter-spacing:0px; }
+	body #page-container .et_pb_button_0,body #page-container .et_pb_button_0:after { 
+								letter-spacing:0px; }
+}
+			</style><style type="text/css" id="et-builder-page-custom-style">
+				 .et_pb_bg_layout_dark { color: #ffffff !important; } .page.et_pb_pagebuilder_layout #main-content { background-color: rgba(255,255,255,0); } .et_pb_section { background-color: #ffffff; }
+			</style><link rel='stylesheet' id='et-gf-roboto-condensed-css'  href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&#038;subset=latin,cyrillic-ext,latin-ext,greek-ext,cyrillic,greek,vietnamese' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&#038;subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-old-standard-tt-css'  href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-lobster-two-css'  href='https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-lobster-css'  href='https://fonts.googleapis.com/css?family=Lobster:400&#038;subset=latin,cyrillic-ext,latin-ext,cyrillic' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-poiret-one-css'  href='https://fonts.googleapis.com/css?family=Poiret+One:400&#038;subset=latin,latin-ext,cyrillic' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-abel-css'  href='https://fonts.googleapis.com/css?family=Abel:400&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='et-gf-arimo-css'  href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700italic,700&#038;subset=latin,cyrillic-ext,latin-ext,greek-ext,cyrillic,greek,vietnamese' type='text/css' media='all' />
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/Divi/includes/builder/scripts/frontend-builder-global-functions.js?ver=3.0.14'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6.1'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-includes/js/comment-reply.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/Divi/includes/builder/scripts/jquery.mobile.custom.min.js?ver=3.0.14'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/Divi/js/custom.js?ver=3.0.14'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/Divi/includes/builder/scripts/jquery.fitvids.js?ver=3.0.14'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/Divi/includes/builder/scripts/waypoints.min.js?ver=3.0.14'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/Divi/includes/builder/scripts/jquery.magnific-popup.js?ver=3.0.14'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_pb_custom = {"ajaxurl":"https:\/\/nestcleaning.com.au\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/nestcleaning.com.au\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/nestcleaning.com.au\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"5e20267671","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"8d49b40b0e","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","is_builder_plugin_used":"","is_divi_theme_used":"1","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"17","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-content/themes/Divi/includes/builder/scripts/frontend-builder-scripts.js?ver=3.0.14'></script>
+<script type='text/javascript' src='https://nestcleaning.com.au/wp-includes/js/wp-embed.min.js?ver=4.7.2'></script>
+<!-- Child theme custom CSS created by Divi Children - http://divi4u.com/divi-children-plugin/ -->
+<style type="text/css" media="screen">
+ #footer-widgets {padding-top:80px;}
+ .footer-widget {margin-bottom:50px!important;}
+ #main-footer { background-color:#2e2e2e!important;}
+ .footer-widget .title {font-size:18px;}
+ #footer-bottom { background-color:#1f1f1f;}
+ #footer-bottom {padding:15px 0 5px;}
+ #footer-info, #footer-info a {color:#666666;}
+ #footer-info, #footer-info a {font-size:14px;}
+ #footer-bottom ul.et-social-icons li a {font-size:24px;}
+ #footer-bottom ul.et-social-icons li {margin-left:18px;}
+ #sidebar h4.widgettitle {font-size:18px;}
+ #sidebar li, #sidebar li a {font-size:14px;}
+</style>
+<!-- End Child theme custom CSS -->
+
+
+</body>
+</html>

@@ -1,3 +1,14 @@
+<?php 
+
+echo $state=$_GET['state'];
+echo $city=$_GET['city'];
+echo $region=$_GET['region'];
+echo $category=$_GET['category'];
+echo $subcategory=$_GET['subcategory'];
+
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -46,12 +57,14 @@ button {
    function loadSerchResult() {
    
    
-     $.post('LoadSearchResult', {type:'serchresult'}, function (data){
-            alert(data);
-		 
+     $.post('BLSearchResultAction', {type:'serchresult',subcategory: '<?php echo $subcategory; ?>',state:'<?php echo $state; ?>',city:'<?php echo $city; ?>',region:'<?php echo $region; ?>',category:'<?php  echo $category; ?>'}, function (data){
+     console.log(data);
+	
+
 	});
    
 }
+//alert('<?php echo $subcategory; ?>')
   </script>
 </head>
 <body>
@@ -153,6 +166,8 @@ button {
                     
                     <div class="container-fluid">
                     <div class="container container_back">
+					
+					
                     <div class="row">
                     <div class="col-lg-2 col-sm-2 col-md-2 col-xs-12 margin_top">
 				<div class="box_shodow">
@@ -219,9 +234,7 @@ button {
             </div>
             
                     </div>
-                    	</div
-                       
-                            ></div>
+                    	</div></div>
                             </div>
                             <br /><br />
                             <div class="container-fluid">

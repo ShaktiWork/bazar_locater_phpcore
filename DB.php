@@ -155,9 +155,16 @@ class DB {
              else  {
                    $i = 0;
             foreach($conditions['where'] as $key => $value){
-                $pre = ($i > 0)?' AND ':'';
-                $sql .= $pre.$key." = '".$value."'";
-                $i++;
+				if (strpos($value, ".") !== false) {
+                //$value;
+				  $pre = ($i > 0)?' AND ':'';
+				   $sql .= $pre.$key." = ".$value."";
+                }
+             else{
+	               $value;
+				   $sql .= $key." = ".$value."";
+                 }
+			 $i++;
             }
              }   
           
@@ -177,7 +184,7 @@ class DB {
             $sql .= ' LIMIT '.$conditions['limit']; 
         }
         
-	//echo $sql;
+     //$sql;
         $query = $this->db->prepare($sql);
         $query->execute();
         

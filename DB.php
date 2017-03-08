@@ -157,12 +157,12 @@ class DB {
             foreach($conditions['where'] as $key => $value){
 				if (strpos($value, ".") !== false) {
                 //$value;
-				  $pre = ($i > 0)?' AND ':'';
-				   $sql .= $pre.$key." = ".$value."";
+				   $pre = ($i > 0)?' AND ':'';
+				    $sql .= $pre.$key." = ".$value."";
                 }
              else{
-	               $value;
-				   $sql .= $key." = ".$value."";
+	                $pre = ($i > 0)?' AND ':'';
+				  $sql .= $pre.$key." = '".$value."'";
                  }
 			 $i++;
             }
@@ -170,13 +170,14 @@ class DB {
           
         }
 			
+			if(array_key_exists("group by",$conditions)){
+            $sql .= ' group by '.$conditions['group by']; 
+        }
         if(array_key_exists("order_by",$conditions)){
             $sql .= ' ORDER BY '.$conditions['order_by']; 
         }
 		
-		if(array_key_exists("group by",$conditions)){
-            $sql .= ' group by '.$conditions['group by']; 
-        }
+		
         
         if(array_key_exists("start",$conditions) && array_key_exists("limit",$conditions)){
             $sql .= ' LIMIT '.$conditions['start'].','.$conditions['limit']; 
@@ -184,7 +185,7 @@ class DB {
             $sql .= ' LIMIT '.$conditions['limit']; 
         }
         
-     //$sql;
+    $sql;
         $query = $this->db->prepare($sql);
         $query->execute();
         
@@ -290,7 +291,7 @@ class DB {
 		        
 				
 			}
-          echo  $sql = "UPDATE ".$table." SET ".$colvalSet.$whereSql;
+           $sql = "UPDATE ".$table." SET ".$colvalSet.$whereSql;
 			//echo $sql;
             $query = $this->db->prepare($sql);
             $update = $query->execute();

@@ -1,2 +1,0 @@
-[08/Mar/2017:20:07:07] (BLSearchResultAction) SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'group by r.userid' at line 1
-[08/Mar/2017:20:07:07] (BLSearchResultAction) SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'group by r.userid' at line 1

@@ -12,6 +12,50 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+ <script>
+    function register() {
+   
+   var fname = $("#fname").val();
+    var lname = $("#lname").val();
+	 var emailid = $("#emailid").val();
+	  var gender = $("input[name='gender']:checked").val();
+	   var role = $("input[name='role']:checked").val();
+	   var mobno = $("#mobno").val();
+	    var password = $("#password").val();
+         var confirmpass = $("#confirmpass").val();
+	   
+		roleid="";
+		if(role == "user"){
+			roleid=1;
+		}
+		if(role == "retailer"){
+			roleid=2;
+		}
+		if(role == "wholeseller"){
+			roleid=3;
+		}
+		if(role == "manufacturer"){
+			roleid=4;
+		}
+		
+	  
+	  /*console.log(fname);
+	  console.log(lname);
+	  console.log(emailid);
+	  console.log(radioValue);
+	  console.log(mobno);
+	  console.log(password);
+	  console.log(confirmpass);*/
+	  
+		//alert(radioValue);
+     $.post('BLUser', {type:'register',fname:fname,lname:lname,emailid:emailid,gender:gender,mobno:mobno,password:password,role:role,roleid:roleid}, function (data){
+     console.log(data);
+	
+
+	});
+   
+}
+ </script>
  
   <style>
   .carousel-inner > .item > img,
@@ -157,6 +201,7 @@ button {
 
   			<div class="container-fluid fluid_clr">
             <div class="container">
+			<form>
             <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
             <div class="login">Login</div>
@@ -177,51 +222,66 @@ button {
       </div>
       	</div>
             </div>
-            
+             
             <div class="container-fluid conti_ner">
             <div class="container">
+			
+		   <form name="userregister" id="userregister">	
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="login">Ragister</div>
+            <div class="login">Register</div>
             </div>
             	</div>
             <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <div class="sex"><input type="radio" name="gender" value="female">&nbsp;User&nbsp;
- 			 <input type="radio" name="gender" value="other"> &nbsp;Retailer  
-              			 <input type="radio" name="gender" value="other">&nbsp;Wholeseller 
-
- 			 <input type="radio" name="gender" value="other">&nbsp;Manufacturer  
+            <!--<div class="sex">
+			<input type="radio" name="role" id="user" value="user">&nbsp;User&nbsp;
+ 			 <input type="radio" name="role" id="retailer" value="retailer"> &nbsp;Retailer  
+              <input type="radio" name="role" id="wholeseller" value="wholeseller">&nbsp;Wholeseller 
+               <input type="radio" name="role" id="manufacturer" value="manufacturer">&nbsp;Manufacturer  
 
 			<div class="rollover">Rollover to see who are user/retailer or wholeseller</div>
-			</form> 
-            </div>
+			
+            </div>-->
+			
+			<div class="sex sfm">
+  <input type="radio"  name="role" value="user">&nbsp;User
+  <input type="radio" name="role"  value="retailer"> Retailer  
+  <input type="radio"  name="role" value="wholeseller">&nbsp;Wholeseller
+  <input type="radio" name="role"  value="manufacturer"> Manufacturer  
+
+</div>
             	</div>
                 	</div>
+		
+			
             <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="email">First Name*</div>
-             <input type="text" name="search" class="search_box" placeholder="">
+             <input type="text" name="search" id="fname" class="search_box" placeholder="">
              </div>
 	
-		 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="email pass_search">Last Name*</div>
-             <input type="text" name="search" class="search_box" placeholder=""></div>
+             <input type="text" name="search" id="lname" class="search_box" placeholder=""></div>
              </div>
              
              <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Email Address*</div>
-             <input type="text" name="search" class="search_box" placeholder="">
+             <input type="text" name="search" id="emailid" class="search_box" placeholder="">
              </div>
 	
 		 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
           
             
-<div class="sex sfm">Sex*&nbsp;<input type="radio" name="gender" value="female">&nbsp;Male
-  <input type="radio" name="gender" value="other"> female  
-</form> </div>
+<div class="sex sfm">Sex*&nbsp;
+<input type="radio" id="male" name="gender" value="male">&nbsp;Male
+  <input type="radio" name="gender" id="female" value="female"> female  
+
+</div>
+
             </div>
             
             
@@ -232,14 +292,14 @@ button {
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Enter your Mobile number*</div>
-             <input type="text" name="search" class="search_box" placeholder="">
+             <input type="text" name="search" id="mobno" class="search_box" placeholder="">
              </div>
               
         
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Please enter the verification code*</div>
-             <input type="text" name="search" class="search_box" placeholder="">
+             <input type="text" name="search"id="varificationcode" class="search_box" placeholder="">
              </div>
              </div>  
                
@@ -247,23 +307,23 @@ button {
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Enter Password*</div>
-             <input type="text" name="search" class="search_box" placeholder="">
+             <input type="text" name="search" id="password" class="search_box" placeholder="">
              </div>
               
         
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Confarm Password*</div>
-             <input type="text" name="search" class="search_box" placeholder="">
+             <input type="text" name="search" id="confirmpass" class="search_box" placeholder="">
              </div>
              </div><br />
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bottom_stle">
               <div class="cliking">By Cliking Ragister Botton.you agree to our <span class="span_clr">Terms and Condltlons</span></div>
               </div>
               <div class="form-group padding2px col-lg-6 col-sm-6 col-md-6 col-xs-6 padding_rght">
-    <input class="btn btn-custom font_search flot_r" value="Ragister" type="submit">
+   <input type="button" class="btn btn-custom font_search flot_r" onclick="register();" value="Register"/>
     </div>
-              
+             </form> 
               
 
                 

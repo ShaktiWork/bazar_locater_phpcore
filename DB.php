@@ -90,7 +90,7 @@ class DB {
 	  }
 	  
 	  
-	  public function getProfileInformation($tblName,$email,$coulumname){
+	  public function validateEmail($tblName,$email,$coulumname){
 	 $sql ='SELECT *from  '.$tblName.' where '.$coulumname.'= "'.$email.'"';
 		
          $query = $this->db->prepare($sql);
@@ -222,9 +222,9 @@ class DB {
             $columns = '';
             $values  = '';
             $i = 0;
-//           if(!array_key_exists('createdOn',$data)){
-//                $data['createdOn'] = date("Y-m-d H:i:s");
-//            }
+          if(!array_key_exists('createdOn',$data)){
+                $data['createdOn'] = date("Y-m-d H:i:s");
+            }
 //            if(!array_key_exists('updatedOn',$data)){
 //                $data['updatedOn'] = date("Y-m-d H:i:s");
 //            }

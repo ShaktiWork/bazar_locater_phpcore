@@ -58,7 +58,7 @@
       </div>
       <div class="col-lg-2">
       <ul class="right_stle navbar-right">
-        <li class="float"><a href="login.php" class="sign">Sign in</a></li>
+        <li class="float"><a href="login" class="sign">Sign in</a></li>
         <li class="float"><a href="#" class="ragister">Ragister</a></li>
       </ul>
     </div>

@@ -1,10 +1,10 @@
 <?php 
 
-echo $state=$_GET['state'];
-echo $city=$_GET['city'];
-echo $region=$_GET['region'];
-echo $category=$_GET['category'];
-echo $subcategory=$_GET['subcategory'];
+ $state=$_GET['state'];
+ $city=$_GET['city'];
+ $region=$_GET['region'];
+ $category=$_GET['category'];
+ $subcategory=$_GET['subcategory'];
 
 
 ?>
@@ -48,6 +48,16 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
+ 
+			h2 {background-color: #CCC; padding: 15px; text-align: center;}
+			h4 {color: #F60; margin-bottom: 0}
+			ul {margin:0; padding:0;}
+			li{cursor:pointer; list-style-type: none; display: inline-block; color: #F0F0F0; text-shadow: 0 0 1px #666666; font-size:1.4em;}
+			p {text-align: justify;}
+			.content {line-height:1.8em;}
+			.post {border-bottom: #f0f0f0 1px solid; padding: 15px 5px;}
+            .highlight, .selected {color:#F4B30A; text-shadow: 0 0 1px #F48F0A;}
   </style>
   
   <script>
@@ -69,101 +79,9 @@ button {
   </script>
 </head>
 <body>
-			<div class="container-fluid">
-            <div class="container">
-            <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-            <div class="top_stle"><img src="img/logo.png" class="img-responsive" /></div>
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" menu_padding>
-        
+			
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse menu_set" id="myNavbar">
-      <ul class="nav navbar-nav top_stle">
-        <li><a href="#" class="menu_style">Home</a></li>
-        <li><a href="#" class="menu_style">About us</a></li>
-        <li><a href="#" class="menu_style">Contact us</a></li>
-        <li><a href="#" class="menu_style">Advartise</a></li>
-        <li><a href="#" class="menu_style">Career</a></li>
-        <li><a href="#" class="menu_style">Testimonial</a></li>
-        <li><a href="#" class="menu_style">feedback</a></li>
-      </ul>
-   
-      </div>
-      </div>
-      <div class="col-lg-2">
-      <ul class="right_stle navbar-right">
-        <li class="float"><a href="#" class="sign">Sign in</a></li>
-        <li class="float"><a href="#" class="ragister">Ragister</a></li>
-      </ul>
-    </div>
-  </div>
-            </div>
-            </div>
-
-			<div class="container-fluid">
-            <div class="container">
-            <div class="row">
-           <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mrg_top_bottom">
-			<div class="mrg_f form-inline">
-  <form>
-    <div class="form-group padding2px pa-lef col-lg-2 col-sm-3 col-md-3 col-xs-6">
-     <div class="select-style">
- <select class="form-control select_bar" id="state" onchange="loadCity();"  style="width:100%;">
-  </select>
-</div>
-    </div>
-	 <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-      <div class="select-style">
-  <select class="form-control select_bar" id="city"  onchange="loadRegion();" style="width:100%;">
-    
-  </select>
-</div>
-    </div>
-    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-      <div class="select-style">
-  <select class="form-control select_bar"  id="region" style="width:100%;">
-    
-  </select>
-</div>
-    </div>
-    
-    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-      <div class="select-style">
-  <select class="form-control select_bar" id="category" onchange="loadSubCategory();" style="width:100%;">
-    
-  </select>
-</div>
-    </div>
-    
-   
-    
-    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-      <div class="select-style">
-   <select class="form-control select_bar"  id= "subcategory"style="width:100%;">
-    </select>
-</div>
-    </div>
-     <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-    <input class="btn btn-custom font_search" value="SEARCH" type="submit">
-    </div>
-  </form>
-  </div>
-		</div>
-                 
-
-                 
-
-            </div>
-            	</div>
-                	</div>
+			<?php  include 'header.php'; ?>
                     
                     <div id="serchresult">
                    

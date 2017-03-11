@@ -84,27 +84,30 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
                       <div class="content_review">
     		<div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="rating-0 job_listing-rating-wrapper" title="0 Reviews">
 			<span class="job_listing-rating-stars">
+			
+			
+			 <ul data-id = "<?php round($ratingper); ?>" data-rating ="<?php round($ratingper); ?>">
+               
+             <?php 
+                for($i=1; $i<=5; $i++) 
+                {
+                    $selected = "";
+                    if(!empty($ratingper)&& $i<=$ratingper) 
+                    {
+                        $selected = "selected";
+                    }
+                ?>
+                    <li class="<?php echo $selected; ?>">&#9733;</li>  
+                <?php 
+                }  
+                ?>			   
+
+			</ul>
 				
-        <span class="stars-rating">
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-                    </span>			</span>
+        	</span>
 
 			<span class="job_listing-rating-average mrg_lft">
-				<span itemprop="ratingValue"><?php echo    round($ratingper, 1);?></span>
+				<span itemprop="ratingValue"><?php echo    round($ratingper);?></span>
 				<meta itemprop="bestRating" content="5">
 				<meta itemprop="worstRating" content="1">
 			</span>

@@ -39,6 +39,32 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
                 }
 		   
             break;
+				
+				case "loginUser":
+				 if(!empty($_POST['email'])){
+					 $email =$_POST['email'];
+					 $password =$_POST['pass'];
+					
+				
+					 $login = $bl->login("t_user",$email,$password,"email","password");
+					 
+				   if($login){
+					
+					   echo "OK";
+					 
+					}
+					  else{
+                   
+					echo "ERR";
+                    
+                }
+					 
+				 }
+		    else{
+                
+				echo "Some problem occurred, please try again";
+             }
+			 break;
        
             
         default:

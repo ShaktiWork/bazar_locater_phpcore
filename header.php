@@ -81,7 +81,7 @@
 </div>
     </div>
      <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-    <input class="btn btn-custom font_search" value="SEARCH" type="submit">
+   <button class="btn btn-custom font_search" onclick="loadSerchResult()" type="button">SEARCH</button>
     </div>
   </form>
   </div>

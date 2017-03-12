@@ -34,7 +34,7 @@ class DB {
      * @param string name of the table
      * @param array select, where, order_by, limit and return_type conditions
      */
-	  public function loginUser($tblName,$email,$password,$canname,$canpassword){
+	 /* public function loginUser($tblName,$email,$password,$canname,$canpassword){
 		 
 		 
 		 
@@ -88,7 +88,7 @@ class DB {
 		 }
 		 
 	  }
-	  
+	  */
 	  
 	  public function validateEmail($tblName,$email,$coulumname){
 	 $sql ='SELECT *from  '.$tblName.' where '.$coulumname.'= "'.$email.'"';
@@ -109,7 +109,7 @@ class DB {
 		
 	  } 
 	  
-	  public function checkPaidCompany($tblName,$condition){
+	/*  public function checkPaidCompany($tblName,$condition){
 		 $sql ='SELECT *from  '.$tblName.' where  comid= '.$condition.'';
 		
 		//echo $sql;
@@ -128,7 +128,7 @@ class DB {
 		 }
 		
 	  } 
-	  
+	  */
 	 
 	 
     public function getRows($table,$conditions = array()){
@@ -185,7 +185,7 @@ class DB {
             $sql .= ' LIMIT '.$conditions['limit']; 
         }
         
-    $sql;
+   // echo $sql;
         $query = $this->db->prepare($sql);
         $query->execute();
         
@@ -322,7 +322,7 @@ class DB {
         return $delete?$delete:false;
     }
 	
-	 public function getSelectedDateRecords ($sql){
+	 public function getRecords ($sql){
              $data="No Record Found";
             // echo $sql;
              $query = $this->db->prepare($sql);
@@ -333,17 +333,20 @@ class DB {
              return $data;
          }
 		 
-		 public function loginAdmin($tblName,$email,$password,$canname,$canpassword){
-		  $sql ='SELECT *from  '.$tblName.' where '.$canname.'= "'.$email.'" and '.$canpassword.'="'.$password.'"';
+		 public function loginUser($tblName,$email,$password,$canname,$canpassword){
+		 $sql ='SELECT *from  '.$tblName.' where '.$canname.'= "'.$email.'" and '.$canpassword.'="'.$password.'"';
 		 
 		 $query = $this->db->prepare($sql);
          $query->execute();
 		 $data = $query->fetch(PDO::FETCH_ASSOC);
-		   
+	//	print_r($data);   
 		if (!empty($data)) {
 			 session_start();
 			// print_r($data);
 			  $_SESSION["email"] = $data['email'];
+			   $_SESSION["userid"] = $data['userid'];
+			    $_SESSION["role"] = $data['role'];
+			 // echo $data['email'];
 			  return $data['email'];
 			 
 			/* if($tblName == 't_candidate_reg'){

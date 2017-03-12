@@ -1,10 +1,10 @@
 <?php 
 
- $state=$_GET['state'];
- $city=$_GET['city'];
- $region=$_GET['region'];
- $category=$_GET['category'];
- $subcategory=$_GET['subcategory'];
+ echo $state=$_GET['state'];
+ echo$city=$_GET['city'];
+ echo $region=$_GET['region'];
+  echo $category=$_GET['category'];
+  echo $subcategory=$_GET['subcategory'];
 
 
 ?>
@@ -19,12 +19,13 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/bootstrap.css" />
 <link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/style.css" />
+
 <link rel="stylesheet" href="css/discoins.css" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/loaddropdown.js"></script>
+
 
  
   <style>
@@ -39,7 +40,7 @@
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
+}/*
 button {
     background-color:#b93101 !important;
     color: white;
@@ -47,7 +48,7 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
-}
+}*/
 
  
 			h2 {background-color: #CCC; padding: 15px; text-align: center;}
@@ -62,19 +63,61 @@ button {
   
   <script>
   $( document ).ready(function() {
-        loadSerchResult();
+       // loadSerchResult();
+		SerchResult();
    });
+   
+   
+    function SerchResult() {
+   
+   var state=$("#state").val();
+   var subcategory=$("#subcategory").val();
+   var region=$("#region").val();
+   var category=$("#category").val();
+   var city=$("#city").val();
+   
+     $.post('BLSearchResultAction', {type:'serchresult',subcategory: '<?php echo $subcategory?>',state:'<?php echo $state?>',city:'<?php echo $city?>',region:'<?php echo $region?>',category:'<?php echo $category?>'}, function (data){
+     console.log(data);
+	 //$("#serchresult").html('');
+	 $("#serchresult").html(data);
+	});
+   }
+   
+   
+   
    function loadSerchResult() {
    
+   var state=$("#state").val();
+   var subcategory=$("#subcategory").val();
+   var region=$("#region").val();
+   var category=$("#category").val();
+   var city=$("#city").val();
    
-     $.post('BLSearchResultAction', {type:'serchresult',subcategory: '<?php echo $subcategory; ?>',state:'<?php echo $state; ?>',city:'<?php echo $city; ?>',region:'<?php echo $region; ?>',category:'<?php  echo $category; ?>'}, function (data){
+     $.post('BLSearchResultAction', {type:'serchresult',subcategory: subcategory,state:state,city:city,region:region,category:category}, function (data){
      //console.log(data);
+	 $("#serchresult").html('');
 	 $("#serchresult").html(data);
-	
-
 	});
+   }
    
-}
+   function loaddetails(userId,roleId){
+	   alert(userId)
+	   alert(roleId)
+	     $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId}, function (data){
+         console.log(data);
+	  $("#serchresult").hide();
+	  $("#laoddetail").html(data);
+	});
+   }
+   
+   function placeReview(){
+	    var speed = $("input[name='speed']:checked").val();
+		 var quality = $("input[name='quality']:checked").val();
+		  var price = $("input[name='price']:checked").val();
+		  alert(speed)
+		   alert(quality)
+		    alert(price)
+   }
 //alert('<?php echo $subcategory; ?>')
   </script>
 </head>
@@ -84,6 +127,8 @@ button {
 			<?php  include 'header.php'; ?>
                     
                     <div id="serchresult">
+					</div>
+					<div id="laoddetail"></div>
                    
                             
                             

@@ -33,6 +33,30 @@ class BLUserImpl extends Exception {
 			   }
 				$log->lclose();
 			}  
+			
+		function login($tblName,$email,$password,$canname,$canpassword){
+		  $log = new Logging();   
+          $log->lfile('mylog.txt');
+          $db = new DB(); 
+		  	       /* echo $email;
+					echo $password;
+					echo $canname;
+					echo $canpassword;
+					echo $tblName;*/
+					
+	     try{		
+		   $login = $db->loginUser($tblName,$email,$password,$canname,$canpassword);
+                   if($login){
+					   return true;
+					}
+					 else{
+                      return false;
+                }
+               }catch(Exception $e){
+				$log->lwrite($e->getMessage());
+			   }
+				$log->lclose();
+			} 
 
  	
 	

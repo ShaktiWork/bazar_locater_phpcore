@@ -38,16 +38,6 @@
 			roleid=4;
 		}
 		
-	  
-	  /*console.log(fname);
-	  console.log(lname);
-	  console.log(emailid);
-	  console.log(radioValue);
-	  console.log(mobno);
-	  console.log(password);
-	  console.log(confirmpass);*/
-	  
-		//alert(radioValue);
      $.post('BLUser', {type:'register',fname:fname,lname:lname,emailid:emailid,gender:gender,mobno:mobno,password:password,role:role,roleid:roleid}, function (data){
      console.log(data);
 	
@@ -55,6 +45,25 @@
 	});
    
 }
+
+function loginUser(){
+	
+	        var email = $("#emailid").val();
+            var pass = $("#password").val();
+			alert(email)
+			alert(pass)
+			$.post('BLUser', {pass: pass, email: email, type: 'loginUser'}, function (data)
+            {
+				if(data =="OK"){
+				window.location.href = 'http://localhost/bazar_locater_phpcore';
+				}
+				else{
+					alert("Please Check Your Username  and Password")
+				}
+                
+            });
+}
+
  </script>
  
   <style>
@@ -206,15 +215,19 @@ button {
             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
             <div class="login">Login</div>
             <div class="email">Email Addresse*</div>
-             <input type="text" name="search" class="search_box" placeholder=""></div>
+             <input type="text" name="search" name="emailid" id="emailid" class="search_box" placeholder=""></div>
 	
 		 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
             <div class="email pass_search passw">Password*</div>
-             <input type="text" name="search" class="search_box" placeholder=""></div>
+             <input type="text" name="search" name="password" id="password" class="search_box" placeholder=""></div>
           
              
         <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6">
-    <div class="L_G_N"><input class="btn btn-custom font_search flot_r1" value="Login" type="submit"></div>
+    <div class="L_G_N">
+
+ <button class="btn btn-custom font_search flot_r1" onclick="loginUser()" type="button">Login</button>
+
+</div>
     <div class="forget">Forget Password?</div>
     </div>
 

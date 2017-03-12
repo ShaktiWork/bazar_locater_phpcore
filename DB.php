@@ -90,7 +90,7 @@ class DB {
 	  }
 	  
 	  
-	  public function getProfileInformation($tblName,$email,$coulumname){
+	  public function validateEmail($tblName,$email,$coulumname){
 	 $sql ='SELECT *from  '.$tblName.' where '.$coulumname.'= "'.$email.'"';
 		
          $query = $this->db->prepare($sql);
@@ -155,21 +155,29 @@ class DB {
              else  {
                    $i = 0;
             foreach($conditions['where'] as $key => $value){
-                $pre = ($i > 0)?' AND ':'';
-                $sql .= $pre.$key." = '".$value."'";
-                $i++;
+				if (strpos($value, ".") !== false) {
+                //$value;
+				   $pre = ($i > 0)?' AND ':'';
+				    $sql .= $pre.$key." = ".$value."";
+                }
+             else{
+	                $pre = ($i > 0)?' AND ':'';
+				  $sql .= $pre.$key." = '".$value."'";
+                 }
+			 $i++;
             }
              }   
           
         }
 			
+			if(array_key_exists("group by",$conditions)){
+            $sql .= ' group by '.$conditions['group by']; 
+        }
         if(array_key_exists("order_by",$conditions)){
             $sql .= ' ORDER BY '.$conditions['order_by']; 
         }
 		
-		if(array_key_exists("group by",$conditions)){
-            $sql .= ' group by '.$conditions['group by']; 
-        }
+		
         
         if(array_key_exists("start",$conditions) && array_key_exists("limit",$conditions)){
             $sql .= ' LIMIT '.$conditions['start'].','.$conditions['limit']; 
@@ -177,7 +185,7 @@ class DB {
             $sql .= ' LIMIT '.$conditions['limit']; 
         }
         
-	//echo $sql;
+    $sql;
         $query = $this->db->prepare($sql);
         $query->execute();
         
@@ -214,9 +222,9 @@ class DB {
             $columns = '';
             $values  = '';
             $i = 0;
-//           if(!array_key_exists('createdOn',$data)){
-//                $data['createdOn'] = date("Y-m-d H:i:s");
-//            }
+          if(!array_key_exists('createdOn',$data)){
+                $data['createdOn'] = date("Y-m-d H:i:s");
+            }
 //            if(!array_key_exists('updatedOn',$data)){
 //                $data['updatedOn'] = date("Y-m-d H:i:s");
 //            }
@@ -283,7 +291,7 @@ class DB {
 		        
 				
 			}
-          echo  $sql = "UPDATE ".$table." SET ".$colvalSet.$whereSql;
+           $sql = "UPDATE ".$table." SET ".$colvalSet.$whereSql;
 			//echo $sql;
             $query = $this->db->prepare($sql);
             $update = $query->execute();

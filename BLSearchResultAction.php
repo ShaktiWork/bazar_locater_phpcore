@@ -18,58 +18,18 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 		  //$data_jason['Result']=$blsearch->searchResult($state,$city,$region,$category,$subcategory);
 			 $result=$blsearch->searchResult($state,$city,$region,$category,$subcategory);
 		    // echo json_encode($data_jason);
-			
-			$result1=(array_values($result));
-			
 			$rating=$blsearch->loadRating();
 			$totalcountGroupby=$blsearch->totalCountGroupby();
 			$arrlength = count($rating);
 			$totalcountLength = count($totalcountGroupby);
 			//echo $totalcountLength;
 			//print_r($totalcountGroupby);
-			
-			//array_push($result1, $rating);
-			//print_r($result1);
-			 $y=0;
+			$y=0;
 			 $j=0;
-			 $jsonArray = array();
-			 
-			 
-			  foreach($result as $key => $csm)
- {
- 
-  for ($x = $y; $x <$arrlength;) {
-	  for($i=$j;$i<$totalcountLength;){
-		  
-		  
-		   if($rating[$x]['user_id']==$totalcountGroupby[$i]['user_id']){
-							 
-							 $review=$totalcountGroupby[$i]['count'];
-							 $result[$key]['review'] = $review;
-							$ratingper= $rating[$x]['rating']/(3*$totalcountGroupby[$i]['count']);
-							 $result[$key]['ratingper'] = $ratingper;
-							
-						  }
-		  break;
-	  }
-	  $j++;
-	  
-	  break;
-  }
-  $y++;
- }
- //print_r($result);
- 
- echo json_encode($result);
-			 
-			 
 			 
 			foreach($result as $arrayValue){       
 			$ratingper="";
 			$review="";
-										 $merge="";
-			
-			//array_push($jsonArray, $rating[$x]['user_id']);
 			 ?>
 			 
 			 
@@ -80,9 +40,9 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 					?>
 					 <br /><br />
 					<?php
-					//$jsonArray[] = $arrayValue;
+					
 					 for ($x = $y; $x <$arrlength;) {
-				//	$jsonArray[] = $rating[$x]['user_id'];
+					
                      echo "user_id==>".$rating[$x]['user_id']."<br>";
 					 /*echo "role_id==>".$rating[$x]['role_id']."<br>";
 					 echo  "rating==>".$rating[$x]['rating']."<br>";*/
@@ -95,15 +55,11 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 						  if($rating[$x]['user_id']==$totalcountGroupby[$i]['user_id']){
 							 //  echo "count==>".$totalcountGroupby[$i]['count']."<br>";
 							   //echo  "rating==>".$rating[$x]['rating']."<br>";
-							 $result['review']=$totalcountGroupby[$i]['count'];
+							  
 							  $review=$totalcountGroupby[$i]['count'];
 							  
-							// $merge = array_merge($jsonArray, $totalcountGroupby[$i]['count']); 
-							   //$jsonArray[] = $review;
-							  // $jsonArray['review']=$review;
 							 $ratingper= $rating[$x]['rating']/(3*$totalcountGroupby[$i]['count']);
 							 // echo "ratingper==>".$ratingper."<br>";
-							// $jsonArray[] = $ratingper;
 						  }
 						 break;
 					 }
@@ -128,32 +84,35 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
                       <div class="content_review">
     		<div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="rating-0 job_listing-rating-wrapper" title="0 Reviews">
 			<span class="job_listing-rating-stars">
+			
+			
+			 <ul data-id = "<?php round($ratingper); ?>" data-rating ="<?php round($ratingper); ?>">
+               
+             <?php 
+                for($i=1; $i<=5; $i++) 
+                {
+                    $selected = "";
+                    if(!empty($ratingper)&& $i<=$ratingper) 
+                    {
+                        $selected = "selected";
+                    }
+                ?>
+                    <li class="<?php echo $selected; ?>">&#9733;</li>  
+                <?php 
+                }  
+                ?>			   
+
+			</ul>
 				
-        <span class="stars-rating">
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-            
-                                    <span class="dashicons dashicons-star-empty"></span>
-                
-                    </span>			</span>
+        	</span>
 
 			<span class="job_listing-rating-average mrg_lft">
-				<span itemprop="ratingValue"><?php echo    round($ratingper, 1);?></span>
+				<span itemprop="ratingValue"><?php echo    round($ratingper);?></span>
 				<meta itemprop="bestRating" content="5">
 				<meta itemprop="worstRating" content="1">
 			</span>
 			<span class="job_listing-rating-count">
-				<span itemprop="ratingCount"><?php echo $review;  ?></span> Reviews</span>
+				<span itemprop="ratingCount"><?php echo $review;  ?></span> Reviews			</span>
 		</div>
 	</div>
    </div>
@@ -190,9 +149,6 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			 
 			 <?php
 			}
-			//print_r($result);
-			//echo json_encode($jsonArray);
-			
 			  break;
 			 
 			

@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="css/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/loaddropdown.js"></script>
+
+
  
   <style>
   .carousel-inner > .item > img,
@@ -19,95 +22,7 @@
   }
   </style>
      <script>
-	   $( document ).ready(function() {
-         loadState();
-		 loadCategory();
-       });
-	   
-	   function loadState () {
-             $.post('BLloadropdownAction.php', {type:'loadState'}, function (data){
-               var dataObj = JSON.parse(data);
-               $.each(dataObj.State, function(key,value){
-              // console.log(value.city_state);
-                $('#state').append(
-              $('<option></option>').val(value.city_state).html(value.city_state)
-          );
-       });
-		 
-	});
-   }
-   
-    function loadCity () {
-		     $("#city").html("");
-		     var state=$("#state").val();
-			 $.post('BLloadropdownAction.php', {type:'loadCity',state:state}, function (data){
-				 //console.log(data)
-               var dataObj = JSON.parse(data);
-               $.each(dataObj.City, function(key,value){
-              console.log(value.city_name);
-                $('#city').append(
-              $('<option></option>').val(value.city_name).html(value.city_name)
-          );
-       });
-		 
-	});
-   }
-   
-   function loadRegion () {
-	  
-		     $("#region").html("");
-		     var state=$("#state").val();
-			  var city=$("#city").val();
-			 $.post('BLloadropdownAction.php', {type:'loadRegion',state:state,city:city}, function (data){
-				 //console.log(data)
-               var dataObj = JSON.parse(data);
-               $.each(dataObj.Region, function(key,value){
-               console.log(value.region);
-                $('#region').append(
-              $('<option></option>').val(value.region).html(value.region)
-          );
-       });
-		 
-	});
-   }
-   
-   
-   function loadCategory () {
-	  
-			 $.post('BLloadropdownAction.php', {type:'loadCategory'}, function (data){
-				 //console.log(data)
-               var dataObj = JSON.parse(data);
-               $.each(dataObj.Category, function(key,value){
-               console.log(value.categoryname);
-                $('#category').append(
-              $('<option></option>').val(value.categoryname).html(value.categoryname)
-          );
-       });
-		 
-	});
-   }
-	 
-	 
-	 function loadSubCategory () {
-		      var category = $("#category").val();
-	          alert(category)
-			 $.post('BLloadropdownAction.php', {type:'loadSubCategory',category:category}, function (data){
-				 //console.log(data)
-               var dataObj = JSON.parse(data);
-               $.each(dataObj.SubCategory, function(key,value){
-               console.log(value.subcategoryname);
-                $('#subcategory').append(
-              $('<option></option>').val(value.subcategoryname).html(value.subcategoryname)
-          );
-       });
-		 
-	});
-   }
-	 
-	 
-	 
-	 
-	 </script>
+	  </script>
    
 </head>
 
@@ -143,7 +58,7 @@
       </div>
       <div class="col-lg-2">
       <ul class="right_stle navbar-right">
-        <li class="float"><a href="login.php" class="sign">Sign in</a></li>
+        <li class="float"><a href="login" class="sign">Sign in</a></li>
         <li class="float"><a href="#" class="ragister">Ragister</a></li>
       </ul>
     </div>
@@ -239,7 +154,7 @@
 </div>
     </div>
      <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-    <input class="btn btn-custom font_search" value="SEARCH" type="submit">
+    <button class="btn btn-custom font_search" onclick="loadListing()" value="SEARCH" type="button">SEARCH</button>
     </div>
   </form>
   </div>

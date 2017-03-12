@@ -1,10 +1,10 @@
 <?php 
 
- echo $state=$_GET['state'];
- echo$city=$_GET['city'];
- echo $region=$_GET['region'];
-  echo $category=$_GET['category'];
-  echo $subcategory=$_GET['subcategory'];
+  $state=$_GET['state'];
+ $city=$_GET['city'];
+  $region=$_GET['region'];
+  $category=$_GET['category'];
+  $subcategory=$_GET['subcategory'];
 
 
 ?>

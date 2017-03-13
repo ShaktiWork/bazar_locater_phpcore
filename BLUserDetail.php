@@ -13,7 +13,10 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 		case "loadDetail":	
 		 $userId= $_POST['userId'];	
 		    $roleId= $_POST['roleId'];	
-		    $result=$blLoad->loadResult($userId,$roleId);
+			 $categoty= $_POST['categoty'];	
+			
+			
+		    $result=$blLoad->loadResult($userId,$roleId,$categoty);
 			//print_r($result);
 			
 			$user_userid = array_column($result, 'user_userid');

@@ -1,13 +1,4 @@
-<?php 
 
-  $state=$_GET['state'];
- $city=$_GET['city'];
-  $region=$_GET['region'];
-  $category=$_GET['category'];
-  $subcategory=$_GET['subcategory'];
-
-
-?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,7 +16,52 @@
  <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/loaddropdown.js"></script>
+<?php 
 
+  $state=$_GET['state'];
+ $city=$_GET['city'];
+  $region=$_GET['region'];
+  $category=$_GET['category'];
+  $subcategory=$_GET['subcategory'];
+  $userid="";
+  $roleid="";
+
+if(session_id() == '' || !isset($_SESSION)) {
+    // session isn't started
+	
+    session_start();
+	//$_SESSION["roleid"];
+	//echo $_SESSION["email"];
+	if (empty($_SESSION["email"])) {
+		
+		?>
+	<script>alert("Please login first")
+	window.location.href = 'index.php';
+	</script>
+	<?php
+		
+	}
+	else{
+	$email=$_SESSION["email"];
+	 $userid=$_SESSION["userid"];
+	$role=$_SESSION["role"];
+	 $roleid= $_SESSION["roleid"];
+	 $userid=$_SESSION['userid'];
+	 ?>
+	 <script>
+	//alert();
+	 
+	   $( document ).ready(function() {
+          $("#logout").css("display","block");
+		   $("#regis").css("display","none");
+		    $("#login").css("display","none");
+       });
+	 </script>
+	 
+	 <?php
+	}
+}
+?>
 
  
   <style>
@@ -75,8 +111,11 @@ button {
    var region=$("#region").val();
    var category=$("#category").val();
    var city=$("#city").val();
+    var userroleid=$("#userroleid").val('<?php echo $roleid  ?>');
+	 var userroleid=$("#user_id").val('<?php echo $userid  ?>');
    
-     $.post('BLSearchResultAction', {type:'serchresult',subcategory: '<?php echo $subcategory?>',state:'<?php echo $state?>',city:'<?php echo $city?>',region:'<?php echo $region?>',category:'<?php echo $category?>'}, function (data){
+   
+     $.post('BLSearchResultAction', {type:'serchresult',subcategory: '<?php echo $subcategory?>',state:'<?php echo $state?>',city:'<?php echo $city?>',region:'<?php echo $region?>',category:'<?php echo $category?>',roleid:'<?php echo $roleid  ?>',userid:'<?php echo $userid; ?>'}, function (data){
      console.log(data);
 	 //$("#serchresult").html('');
 	 $("#serchresult").html(data);
@@ -92,20 +131,29 @@ button {
    var region=$("#region").val();
    var category=$("#category").val();
    var city=$("#city").val();
+    var roleid=$("#userroleid").val();
+	 var userid=$("#user_id").val();
    
-     $.post('BLSearchResultAction', {type:'serchresult',subcategory: subcategory,state:state,city:city,region:region,category:category}, function (data){
+     $.post('BLSearchResultAction', {type:'serchresult',subcategory: subcategory,state:state,city:city,region:region,category:category,roleid:roleid,userid:userid}, function (data){
      //console.log(data);
+	 $("#laoddetail").html('');
+	  $("#laoddetail").hide();
 	 $("#serchresult").html('');
+	 $("#serchresult").show();
 	 $("#serchresult").html(data);
+	 
+	 	 
+	  
 	});
    }
    
-   function loaddetails(userId,roleId){
-	   alert(userId)
-	   alert(roleId)
-	     $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId}, function (data){
+   function loaddetails(userId,roleId,categoty){
+	   
+	     $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId,categoty:categoty}, function (data){
          console.log(data);
+		 
 	  $("#serchresult").hide();
+	  $("#laoddetail").show();
 	  $("#laoddetail").html(data);
 	});
    }
@@ -125,7 +173,10 @@ button {
 			
 
 			<?php  include 'header.php'; ?>
-                    
+			<input type="hidden" id="userroleid" value="">
+			<input type="hidden" id="user_id" value="">
+             
+			 
                     <div id="serchresult">
 					</div>
 					<div id="laoddetail"></div>

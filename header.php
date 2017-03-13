@@ -29,8 +29,9 @@
       </div>
       <div class="col-lg-2">
       <ul class="right_stle navbar-right">
-        <li class="float"><a href="#" class="sign">Sign in</a></li>
-        <li class="float"><a href="#" class="ragister">Ragister</a></li>
+        <li class="float"><a href="#" id="login" style="display:block" class="sign" >Sign in</a></li>
+        <li class="float"><a href="#" id="regis" style="display:block" class="ragister">Ragister</a></li>
+		<li class="float"><a href="logout"class="ragister" id="logout" style="display:none">Logout</a></li>
       </ul>
     </div>
   </div>

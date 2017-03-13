@@ -1,4 +1,24 @@
 
+
+<?php
+if(session_id() == '' || !isset($_SESSION)) {
+    // session isn't started
+    session_start();
+	echo $_SESSION["email"];
+	if (empty($_SESSION["email"])) {
+		
+		?>
+	<script>alert("Please login first")
+	window.location.href = 'login';
+	</script>
+	<?php
+		
+	}
+}
+
+
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 

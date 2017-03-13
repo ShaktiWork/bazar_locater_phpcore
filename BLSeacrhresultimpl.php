@@ -13,17 +13,18 @@ class BLSeacrhresultimpl extends Exception {
   }
 
 
-	function searchResult($state,$city,$region,$category,$subcategory)
+	function searchResult($state,$city,$region,$category,$subcategory,$roleid)
    {    $log = new Logging();   
         $log->lfile('mylog.txt');
         $db = new DB(); 
+		 $userroleid = $roleid + '1';
 	  
 	  // $condition = array('where' => array('uc.user_roleid' => 2,
             //    'cat.categoryname' => 'uc.user_category'), 'select' => 'wid,name');
 		try{		
 	
 	//echo $state
-  $query="SELECT uc.user_roleid,uc.user_userid,upd.user_shopname,upd.user_shop_mobile,upd.user_shop_email,upd.user_shop_web,uc.user_category,cat.imagepath FROM t_user_profile_detail upd join t_user_category_rel uc on uc.user_userid= upd.user_userid join t_category cat on uc.user_category=cat.categoryname where upd.user_roleid=2 and upd.user_state='$state' and upd.user_city='$city' and upd.user_region='$region'and uc.user_category='$category' and uc.user_userid= upd.user_userid order by upd.user_userid";
+ $query="SELECT uc.user_roleid,uc.user_userid,upd.user_shopname,upd.user_shop_mobile,upd.user_shop_email,upd.user_shop_web,uc.user_category,cat.imagepath FROM t_user_profile_detail upd join t_user_category_rel uc on uc.user_userid= upd.user_userid join t_category cat on uc.user_category=cat.categoryname where upd.user_roleid='$userroleid' and upd.user_state='$state' and upd.user_city='$city' and upd.user_region='$region'and uc.user_category='$category' and uc.user_userid= upd.user_userid order by upd.user_userid";
 	
 	 $records = $db->getRecords($query);
 	
@@ -45,13 +46,16 @@ class BLSeacrhresultimpl extends Exception {
 	}  
 
 
-function loadRating()
+function loadRating($roleid,$userid)
    {    $log = new Logging();   
         $log->lfile('mylog.txt');
         $db = new DB(); 
 	  try{		
 	
-	  $condition = array('where' => array('r.roleid' => 2,'u.roleid' => 2,'u.userid' => 'r.userid'),'select' => 'sum(r.speedrate+r.pricerate+r.qualityrate)  as rating,r.userid as user_id,r.roleId as role_id','group by' => 'r.userid','order_by'=>'r.userid');
+    // $userid;
+	 $roleid = $roleid + '1';
+	
+	  $condition = array('where' => array('r.roleid' => $roleid,'u.roleid' => $roleid,'u.userid' => 'r.userid'),'select' => 'sum(r.speedrate+r.pricerate+r.qualityrate)  as rating,r.userid as user_id,r.roleId as role_id','group by' => 'r.userid','order_by'=>'r.userid');
 	  $records = $db->getRows('t_user u,t_rat r',$condition);
 	  $result=(array_values($records));
 	  if($records){
@@ -65,13 +69,14 @@ function loadRating()
 	}
 
 
-function totalCountGroupby()
+function totalCountGroupby($roleid,$userid)
    {    $log = new Logging();   
         $log->lfile('mylog.txt');
         $db = new DB(); 
 	  try{		
 	
-	  $condition = array('where' => array('r.roleid' => 2,'u.roleid' => 2,'u.userid' => 'r.userid'),'select' => 'r.userid as user_id,r.roleId as role_id,count(*) as count','group by' => 'r.userid',
+	$roleid = $roleid + '1';
+	  $condition = array('where' => array('r.roleid' => $roleid,'u.roleid' => $roleid,'u.userid' => 'r.userid'),'select' => 'r.userid as user_id,r.roleId as role_id,count(*) as count','group by' => 'r.userid',
 	  'order_by'=>'r.userid');
 	  $records = $db->getRows('t_user u,t_rat r',$condition);
 	  $result=(array_values($records));

@@ -15,11 +15,16 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			  $city=$_POST['city'];
 			  $region=$_POST['region'];
 			  $category=$_POST['category'];
+			   $roleid=$_POST['roleid'];
+			   $userid=$_POST['userid'];
+			   
+			   
+			  
 		  //$data_jason['Result']=$blsearch->searchResult($state,$city,$region,$category,$subcategory);
-			 $result=$blsearch->searchResult($state,$city,$region,$category,$subcategory);
+			 $result=$blsearch->searchResult($state,$city,$region,$category,$subcategory,$roleid);
 		    // echo json_encode($data_jason);
-			$rating=$blsearch->loadRating();
-			$totalcountGroupby=$blsearch->totalCountGroupby();
+			$rating=$blsearch->loadRating($roleid,$userid);
+			$totalcountGroupby=$blsearch->totalCountGroupby($roleid,$userid);
 			$arrlength = count($rating);
 			$totalcountLength = count($totalcountGroupby);
 			//echo $totalcountLength;
@@ -117,7 +122,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 	</div>
    </div>
     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 categary">
-            <div class="category_name"><a href="#" onclick="loaddetails('<?php echo $arrayValue['user_userid']; ?>','<?php echo $arrayValue['user_roleid']; ?>')" ><?php echo $arrayValue['user_category']; ?></a></div>
+            <div class="category_name"><a href="#" onclick="loaddetails('<?php echo $arrayValue['user_userid']; ?>','<?php echo $arrayValue['user_roleid']; ?>','<?php echo $arrayValue['user_category']; ?>')" ><?php echo $arrayValue['user_category']; ?></a></div>
             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
             <div class="contact_no"><span class="glyphicon glyphicon-phone"></span>+91- <?php echo $arrayValue['user_shop_mobile']; ?></div>
             <div class="contact_no"><span class="glyphicon glyphicon-envelope"></span>&nbsp;<?php echo $arrayValue['user_shop_email']; ?></div>

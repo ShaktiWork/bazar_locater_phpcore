@@ -185,7 +185,7 @@ class DB {
             $sql .= ' LIMIT '.$conditions['limit']; 
         }
         
-   // echo $sql;
+    //echo $sql;
         $query = $this->db->prepare($sql);
         $query->execute();
         
@@ -346,6 +346,7 @@ class DB {
 			  $_SESSION["email"] = $data['email'];
 			   $_SESSION["userid"] = $data['userid'];
 			    $_SESSION["role"] = $data['role'];
+				  $_SESSION["roleid"] = $data['roleid'];
 			 // echo $data['email'];
 			  return $data['email'];
 			 

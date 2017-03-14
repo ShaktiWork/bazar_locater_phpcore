@@ -1,8 +1,11 @@
 <?php
 //include 'DB.php';
 include 'BLloadropdownImpl.php';
-
+include 'config.php';
+$cf = new config();
 $bl = new BLloadropdownImpl();
+
+
 //$db = new DB();
 //$tblName = 'users';
 if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
@@ -30,6 +33,35 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			 case "loadCategory":	
 		     $data_jason['Category']=$bl->loadCategory();
 		     echo json_encode($data_jason);
+		     break;
+			 
+			 case "loadCategoryAll":	
+		     $result=$bl->loadCategoryAll();
+			 //print_r($result);
+		     //echo json_encode($data_jason);
+			 foreach($result as $arrayValue){  
+			
+			 
+			 ?>
+			   
+          <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 margin_top">
+				<div class="box_shodow ">
+				<div class="img_box" onclick="loaddetails('<?php echo $arrayValue['categoryname'];?>' );">
+						<img src='<?php  echo $cf->baseurl; ?>/bazar_admin_codeigniter/<?php echo $arrayValue['imagepath']; ?>' class="img-responsive" alt="clothes">
+							<div class="img_text_opcity"><a href=""><?php  echo $arrayValue['categoryname']; ?></a></div>
+                                <div class="overlay"></div>
+                                </div>
+                                	</div>
+                                    </div>
+                  
+          
+            
+
+			 
+			 <?php
+			 
+			 }
+			 
 		     break;
 			 
 			 case "loadSubCategory":	

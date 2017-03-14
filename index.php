@@ -14,6 +14,14 @@ if(session_id() == '' || !isset($_SESSION)) {
 	<?php
 		
 	}
+	else{
+		$email=$_SESSION["email"];
+	 $userid=$_SESSION["userid"];
+	$role=$_SESSION["role"];
+	 $roleid= $_SESSION["roleid"];
+	 $userid=$_SESSION['userid'];
+		
+	}
 }
 
 
@@ -33,7 +41,35 @@ if(session_id() == '' || !isset($_SESSION)) {
 <script src="js/bootstrap.min.js"></script>
 <script src="js/loaddropdown.js"></script>
 
+<script>
+$( document ).ready(function() {
+        loadAllCategory();
+		 var userroleid=$("#userroleid").val('<?php echo $roleid  ?>');
+	     var userroleid=$("#user_id").val('<?php echo $userid  ?>');
+ });
+	   
+function loadAllCategory(){
+	 
+	 $.post('BLloadropdownAction', {type:'loadCategoryAll'}, function (data){
+	 $("#categoryload").html(data);
+   });
+}
 
+    
+	  function loaddetails(categoty){
+	      
+	      var userId=$("#user_id").val();
+		  var roleId=$("#userroleid").val();
+		  
+		  
+		  var url = 'listing?categoty='+categoty+"&type="+'home';
+          window.location.href = url;
+		  
+		  
+	  
+   }
+	
+</script>
  
   <style>
   .carousel-inner > .item > img,
@@ -194,133 +230,11 @@ if(session_id() == '' || !isset($_SESSION)) {
         <div class="row">
  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 categy border">
             <div class="category_name">Category</div>
-            
-          <div class="col-lg-3 col-sm-3 col-md-3 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/13BGCTY5-1_1516349f.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Clothing</a></div>
-                                <div class="overlay"></div>
-                                </div>
-                                	</div>
-                                    </div>
-                    <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/13BGCTY5-1_1516349f.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Clothing</a></div>
-                                <div class="overlay"></div>
-                                </div>
-                                	</div>
-                                    </div>
-          
-            
-            
-            <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/Travel_Program_fi.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Program</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                            	
-                                                
-             <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/online-shopping-buy-sell-safety-tips.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Shoping-buy</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                            
-                                            	
-              <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/Movies.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Movies</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                         
-            <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/Lab-Glassware.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Glassware</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                         
-      <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/kkbooking.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Booking</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                          
-             <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/holiday-groceries-2u-800x600.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Grocerries</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                        
-            <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/hand.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Hand</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                         
-                                                
-     <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/13BGCTY5-1_1516349f.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Hospital</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                      
-        <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/EntertainmentHeader.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Entertainment</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                        
-         <div class="col-lg-3 col-sm-4 col-md-4 col-xs-12 margin_top">
-				<div class="box_shodow ">
-					<div class="img_box">
-						<img src="img/category/Electronics.jpg" class="img-responsive" alt="clothes">
-							<div class="img_text_opcity"><a href="">Electronics</a></div>
-                                <div class="overlay"></div>
-           							 </div>
-                                     	</div>
-                                        	</div>
-                                        
-
-                                            	</div>
+			<input type="hidden"id="userroleid" value="">
+			<input type="hidden" id="user_id" value="">
+            <div id="categoryload"></div>
+              
+			  </div>
                                                
                                             	
                                             

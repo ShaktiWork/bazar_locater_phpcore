@@ -67,6 +67,16 @@ class BLloadropdownImpl extends Exception {
 	  }
 	}   
 	
+	function loadCategoryAll(){
+      $db = new DB(); 
+	  $condition = array('where' => array('active' => 1),'select' => 'categoryname,imagepath');
+	  $records = $db->getRows('t_category',$condition);
+	  if($records){
+		   $Category=(array_values($records)); 
+		   return $Category;
+	  }
+	}   
+	
 	
 	function loadSubCategory($category){
 		$db = new DB();

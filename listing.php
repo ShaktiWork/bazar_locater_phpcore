@@ -18,14 +18,12 @@
 <script src="js/loaddropdown.js"></script>
 <?php 
 
-  $state=$_GET['state'];
- $city=$_GET['city'];
-  $region=$_GET['region'];
-  $category=$_GET['category'];
-  $subcategory=$_GET['subcategory'];
+  /**/
+  
   $userid="";
   $roleid="";
-
+  
+  
 if(session_id() == '' || !isset($_SESSION)) {
     // session isn't started
 	
@@ -49,9 +47,7 @@ if(session_id() == '' || !isset($_SESSION)) {
 	 $userid=$_SESSION['userid'];
 	 ?>
 	 <script>
-	//alert();
-	 
-	   $( document ).ready(function() {
+	 $( document ).ready(function() {
           $("#logout").css("display","block");
 		   $("#regis").css("display","none");
 		    $("#login").css("display","none");
@@ -60,7 +56,66 @@ if(session_id() == '' || !isset($_SESSION)) {
 	 
 	 <?php
 	}
+	
+	
+	
+
 }
+if(!empty($_GET['type'])){
+	  $categoty=$_GET['categoty'];
+	  ?>
+	  <script>
+	 
+	$( document ).ready(function() {
+      
+	   var userId=parseInt('<?php echo $userid?>');
+	  var  roleId=parseInt('<?php echo $roleid?>');
+		 //loaddetails();
+		 SearchByCategory(userId,roleId,'<?php echo $_GET['categoty']?>');
+   });
+	// 
+	  </script>
+	  <?php
+  }
+
+
+   if(!empty($_GET['state'])){
+	 echo $state=$_GET['state'];
+     $city=$_GET['city'];
+     $region=$_GET['region'];
+     $category=$_GET['category'];
+     $subcategory=$_GET['subcategory'];
+	 ?>
+	  <script>
+	 
+	$( document ).ready(function() {
+		//alert("t");
+        SerchResult();
+		
+   });
+   
+     function SerchResult() {
+   
+   var state=$("#state").val();
+   var subcategory=$("#subcategory").val();
+   var region=$("#region").val();
+   var category=$("#category").val();
+   var city=$("#city").val();
+     var userroleid=$("#userroleid").val('<?php echo $roleid  ?>');
+	 var userroleid=$("#user_id").val('<?php echo $userid  ?>');
+   
+   
+     $.post('BLSearchResultAction', {type:'serchresult',subcategory: '<?php echo $subcategory?>',state:'<?php echo $state?>',city:'<?php echo $city?>',region:'<?php echo $region?>',category:'<?php echo $category?>',roleid:'<?php echo $roleid  ?>',userid:'<?php echo $userid; ?>'}, function (data){
+     console.log(data);
+	 //$("#serchresult").html('');
+	 $("#serchresult").html(data);
+	});
+   }
+	// 
+	  </script>
+	  <?php
+	 
+  }
 ?>
 
  
@@ -98,29 +153,25 @@ button {
   </style>
   
   <script>
-  $( document ).ready(function() {
-       // loadSerchResult();
-		SerchResult();
-   });
+ 
    
-   
-    function SerchResult() {
-   
-   var state=$("#state").val();
-   var subcategory=$("#subcategory").val();
-   var region=$("#region").val();
-   var category=$("#category").val();
-   var city=$("#city").val();
-    var userroleid=$("#userroleid").val('<?php echo $roleid  ?>');
-	 var userroleid=$("#user_id").val('<?php echo $userid  ?>');
-   
-   
-     $.post('BLSearchResultAction', {type:'serchresult',subcategory: '<?php echo $subcategory?>',state:'<?php echo $state?>',city:'<?php echo $city?>',region:'<?php echo $region?>',category:'<?php echo $category?>',roleid:'<?php echo $roleid  ?>',userid:'<?php echo $userid; ?>'}, function (data){
-     console.log(data);
-	 //$("#serchresult").html('');
+   function SearchByCategory(userId,roleId,category)
+   {
+	    $("#userroleid").val('<?php echo $roleid  ?>');
+	    $("#user_id").val('<?php echo $userid  ?>');
+	   $.post('BLSearchResultAction', {type:'serchresultByCategory',category:category,roleId:roleId,userId:userId}, function (data){
+     //console.log(data);
+	 $("#laoddetail").html('');
+	  $("#laoddetail").hide();
+	 $("#serchresult").html('');
+	 $("#serchresult").show();
 	 $("#serchresult").html(data);
+	 
+	 	 
+	  
 	});
    }
+  
    
    
    
@@ -133,6 +184,7 @@ button {
    var city=$("#city").val();
     var roleid=$("#userroleid").val();
 	 var userid=$("#user_id").val();
+	 
    
      $.post('BLSearchResultAction', {type:'serchresult',subcategory: subcategory,state:state,city:city,region:region,category:category,roleid:roleid,userid:userid}, function (data){
      //console.log(data);
@@ -147,9 +199,12 @@ button {
 	});
    }
    
+   
    function loaddetails(userId,roleId,categoty){
 	   
-	     $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId,categoty:categoty}, function (data){
+	    $("#userroleid").val('<?php echo $roleid  ?>');
+	    $("#user_id").val('<?php echo $userid  ?>');
+	    $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId,categoty:categoty}, function (data){
          console.log(data);
 		 
 	  $("#serchresult").hide();
@@ -166,7 +221,7 @@ button {
 		   alert(quality)
 		    alert(price)
    }
-//alert('<?php echo $subcategory; ?>')
+
   </script>
 </head>
 <body>

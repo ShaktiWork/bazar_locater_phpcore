@@ -17,15 +17,21 @@ class BLSeacrhresultimpl extends Exception {
    {    $log = new Logging();   
         $log->lfile('mylog.txt');
         $db = new DB(); 
-		 $userroleid = $roleid + '1';
+		  $userroleid = $roleid + '1';
 	  
 	  // $condition = array('where' => array('uc.user_roleid' => 2,
             //    'cat.categoryname' => 'uc.user_category'), 'select' => 'wid,name');
 		try{		
 	
 	//echo $state
- $query="SELECT uc.user_roleid,uc.user_userid,upd.user_shopname,upd.user_shop_mobile,upd.user_shop_email,upd.user_shop_web,uc.user_category,cat.imagepath FROM t_user_profile_detail upd join t_user_category_rel uc on uc.user_userid= upd.user_userid join t_category cat on uc.user_category=cat.categoryname where upd.user_roleid='$userroleid' and upd.user_state='$state' and upd.user_city='$city' and upd.user_region='$region'and uc.user_category='$category' and uc.user_userid= upd.user_userid order by upd.user_userid";
-	
+	$query="";
+	if(!empty($state)&& !empty($city) && !empty($region)){
+$query="SELECT uc.user_roleid,uc.user_userid,upd.user_shopname,upd.user_shop_mobile,upd.user_shop_email,upd.user_shop_web,uc.user_category,cat.imagepath FROM t_user_profile_detail upd join t_user_category_rel uc on uc.user_userid= upd.user_userid join t_category cat on uc.user_category=cat.categoryname where upd.user_roleid='$userroleid' and upd.user_state='$state' and upd.user_city='$city' and upd.user_region='$region'and uc.user_category='$category' and uc.user_userid= upd.user_userid order by upd.user_userid";
+	}
+	else{
+		
+		 $query="SELECT uc.user_roleid,uc.user_userid,upd.user_shopname,upd.user_shop_mobile,upd.user_shop_email,upd.user_shop_web,uc.user_category,cat.imagepath FROM t_user_profile_detail upd join t_user_category_rel uc on uc.user_userid= upd.user_userid join t_category cat on uc.user_category=cat.categoryname where upd.user_roleid='$userroleid' and  uc.user_category='$category' and uc.user_userid= upd.user_userid order by upd.user_userid";
+	}
 	 $records = $db->getRecords($query);
 	
 	
@@ -33,11 +39,19 @@ class BLSeacrhresultimpl extends Exception {
 	 /* $condition = array('where' => array('uc.user_roleid' => 2,
                 'cat.categoryname' => 'uc.user_category'),'select' => ' uc.user_roleid,uc.user_userid,uc.user_category,uc.user_shopname,uc.user_shop_mobile,uc.user_shop_email,uc.user_shop_web,cat.imagepath,uc.user_userid','order_by'=>'uc.user_userid');
 	  $records = $db->getRows('t_user_category_rel uc ,t_category cat',$condition);*/
-	  $result=(array_values($records));
-	 // print_r($result);
-	  if($records){
+	 // echo sizeof($records);
+	  if(sizeof($records)>0){
+		    $result=(array_values($records));
+			  if($records){
 		  return $result;
 	  }
+	  }
+	  else{
+		  return $records;
+	  }
+	
+	 // print_r($result);
+	
 	}catch(Exception $e){
 		//echo ;
 		$log->lwrite($e->getMessage());

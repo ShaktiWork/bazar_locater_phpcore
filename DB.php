@@ -8,10 +8,10 @@
  */
 class DB {
     // Database credentials
-    private $dbHost     = 'localhost';
-    private $dbUsername = 'root';
-    private $dbPassword = 'root';
-    private $dbName     = 'bazarlocater';
+    private $dbHost     = 'shaktisharma.c6grpgunm0b1.us-west-2.rds.amazonaws.com';
+    private $dbUsername = 'shaktisharma';
+    private $dbPassword = 'shaktisharma';
+    private $dbName     = 'bazar_lacater';
     public $db;
     /*
      * Connect to the database and return db connecction

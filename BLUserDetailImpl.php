@@ -45,7 +45,25 @@ class BLUserDetailImpl extends Exception {
 
 
 
+	function placereview($tblName,$userData){
+		$log = new Logging();   
+        $log->lfile('mylog.txt');
+        $db = new DB(); 
+	    try{		
+		
+		    $insert = $db->insert($tblName,$userData);
+		    if($insert){
+		     return true;
+	       }else{
+			   return false;
+		   }
+	     }catch(Exception $e){
+				$log->lwrite($e->getMessage());
+			   }
+				$log->lclose();
+			}  
 
+	
 	
 	
 	

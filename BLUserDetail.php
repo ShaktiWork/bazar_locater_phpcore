@@ -8,8 +8,7 @@ $blLoad = new BLUserDetailImpl();
 if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
    $type = $_REQUEST['type'];
     switch($type){
-		
-		
+  
 		case "loadDetail":	
 		 $userId= $_POST['userId'];	
 		    $roleId= $_POST['roleId'];	
@@ -189,19 +188,19 @@ for (i = 0; i < acc.length; i++) {
      
         
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pdd">Comment</div>
-         <textarea name="message" rows="8" cols="92"></textarea>
+         <textarea name="message"  id="ucomment" rows="8" cols="92"></textarea>
         
         <div class="">Name*</div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pdd">
-        <input name="search" class="search_mial1" placeholder="" type="text">
+        <input name="uname"  id="uname"class="search_mial1" placeholder="" type="text">
         </div>
         <div class="">Email*</div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pdd">
-        <input name="search" class="search_mial1" placeholder="" type="text">
+        <input name="search" name="uemail"  id="uemail" class="search_mial1" placeholder="" type="text">
         </div>
         <div class="">Website</div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pdd">
-        <input name="search" class="search_mial1" placeholder="" type="text">
+        <input name="search" name="uweb" id="uweb" class="search_mial1" placeholder="" type="text">
         </div> 
         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 pdd">
     <div class="">
@@ -250,6 +249,49 @@ for (i = 0; i < acc.length; i++) {
                    
 					echo "ERR";
                     
+                }
+					 
+				 }
+		    else{
+                
+				echo "Some problem occurred, please try again";
+             }
+			 break;
+			 
+			 	case "placereview":
+				 if(!empty($_POST['user_id'])){
+					echo "userid=>". $user_id =$_POST['user_id'];
+					echo  "userroleid=>". $userroleid =$_POST['userroleid'];
+					echo  $uweb =$_POST['uweb'];
+					 echo $uemail =$_POST['uemail'];
+					 echo $uname =$_POST['uname'];
+					echo  $ucomment =$_POST['ucomment'];
+					echo  $price =$_POST['price'];
+					 echo $quality =$_POST['quality'];
+					echo  $speed =$_POST['speed'];
+					echo  $searcheduserroleid =$_POST['searcheduserroleid'];
+					echo  $searchuser_id =$_POST['searchuser_id'];
+					 $userData = array(
+                    'userid' => $_POST['searchuser_id'],
+                    'roleid' => $_POST['searcheduserroleid'],
+                    'speedrate' => $_POST['speed'],
+					'pricerate' => $_POST['price'],
+                    'qualityrate' => $_POST['quality'],
+					'ratedbyid' => $_POST['user_id'],
+					'comment' => $_POST['ucomment'],
+					'name' => $_POST['uname'],
+					'email' => $_POST['uemail'],
+					'website' => $_POST['uweb'],
+					'ratedbyroleid' => $_POST['userroleid']);
+					
+					
+				$tblName = 't_rat';
+				 $insert = $blLoad->placereview($tblName,$userData);
+			     if($insert){
+                   echo  "Your review  has been placed successfully.";
+                }else{
+                  
+                     echo 'Some problem occurred, please try again.';
                 }
 					 
 				 }

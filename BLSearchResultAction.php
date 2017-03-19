@@ -24,6 +24,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			 $result=$blsearch->searchResult($state,$city,$region,$category,$subcategory,$roleid);
 		    // echo json_encode($data_jason);
 			$rating=$blsearch->loadRating($roleid,$userid);
+			//print_r($rating);
 			$totalcountGroupby=$blsearch->totalCountGroupby($roleid,$userid);
 			$arrlength = count($rating);
 			$totalcountLength = count($totalcountGroupby);
@@ -53,8 +54,8 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 					 /*echo "role_id==>".$rating[$x]['role_id']."<br>";
 					 echo  "rating==>".$rating[$x]['rating']."<br>";*/
 					 if($rating){
-						echo  $totalcountLength;
-						  echo "hello";
+						//echo  $totalcountLength;
+						 
 					 for($i=$j;$i<$totalcountLength;){
 						// echo "j value".$j."<br>";
 						// echo "user_id==>".$rating[$x]['user_id']."<br>";
@@ -65,9 +66,10 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 							 //  echo "count==>".$totalcountGroupby[$i]['count']."<br>";
 							   //echo  "rating==>".$rating[$x]['rating']."<br>";
 							  
-							  $review=$totalcountGroupby[$i]['count'];
+							   $review=$totalcountGroupby[$i]['count'];
+							  // echo $rating[$x]['rating'];
 							  
-							 $ratingper= $rating[$x]['rating']/(3*$totalcountGroupby[$i]['count']);
+							  $ratingper= $rating[$x]['rating']/(3*$totalcountGroupby[$i]['count']);
 							 // echo "ratingper==>".$ratingper."<br>";
 						  }
 						 break;
@@ -95,7 +97,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			<span class="job_listing-rating-stars">
 			
 			
-			 <ul data-id = "<?php round($ratingper); ?>" data-rating ="<?php round($ratingper); ?>">
+			 <ul data-id = "<?php echo round($ratingper); ?>" data-rating ="<?php echo round($ratingper); ?>">
                
              <?php 
                 for($i=1; $i<=5; $i++) 
@@ -116,7 +118,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
         	</span>
 
 			<span class="job_listing-rating-average mrg_lft">
-				<span itemprop="ratingValue"><?php echo    round($ratingper);?></span>
+				<span itemprop="ratingValue"><?php echo (int)$ratingper;?></span>
 				<meta itemprop="bestRating" content="5">
 				<meta itemprop="worstRating" content="1">
 			</span>
@@ -207,6 +209,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
                      echo "user_id==>".$rating[$x]['user_id']."<br>";
 					 /*echo "role_id==>".$rating[$x]['role_id']."<br>";
 					 echo  "rating==>".$rating[$x]['rating']."<br>";*/
+					  if($rating){
 					 for($i=$j;$i<$totalcountLength;){
 						// echo "j value".$j."<br>";
 						// echo "user_id==>".$rating[$x]['user_id']."<br>";
@@ -225,6 +228,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 						 break;
 					 }
 					 $j++;
+					  }
 					 
 					 
 					 break;

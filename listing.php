@@ -202,6 +202,9 @@ button {
    
    function loaddetails(userId,roleId,categoty){
 	   
+	      $("#searcheduserroleid").val(roleId);
+	      $("#searchuser_id").val(userId);
+	   
 	    $("#userroleid").val('<?php echo $roleid  ?>');
 	    $("#user_id").val('<?php echo $userid  ?>');
 	    $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId,categoty:categoty}, function (data){
@@ -214,12 +217,31 @@ button {
    }
    
    function placeReview(){
-	    var speed = $("input[name='speed']:checked").val();
+	   /* var speed = $("input[name='speed']:checked").val();
 		 var quality = $("input[name='quality']:checked").val();
-		  var price = $("input[name='price']:checked").val();
-		  alert(speed)
-		   alert(quality)
-		    alert(price)
+		  var price = $("input[name='price']:checked").val();*/
+		 var speed= $("#speedrate").val();
+		 var quality = $("#qualityrate").val();
+		 var price= $("#pricerate").val();
+		 var ucomment = $("#ucomment").val();
+		 var uname= $("#uname").val();
+	     var uemail= $("#uemail").val();
+	     var uweb= $("#uweb").val();
+		 var userroleid= $("#userroleid").val();
+	     var user_id= $("#user_id").val();
+		 var searcheduserroleid= $("#searcheduserroleid").val();
+	      var searchuser_id= $("#searchuser_id").val();
+		 
+			
+		 $.post('BLUserDetail', {type:'placereview',user_id: user_id,userroleid:userroleid,uweb:uweb,
+		 uemail:uemail,uname:uname,ucomment:ucomment,price:price,quality:quality,speed:speed,searcheduserroleid:searcheduserroleid,searchuser_id:searchuser_id
+		 }, function (data){
+          console.log(data);
+	      alert(data)
+	});		
+			
+		   
+			 
    }
 
   </script>
@@ -230,10 +252,11 @@ button {
 			<?php  include 'header.php'; ?>
 			<input type="hidden" id="userroleid" value="">
 			<input type="hidden" id="user_id" value="">
+			<input type="hidden" id="searcheduserroleid" value="">
+			<input type="hidden" id="searchuser_id" value="">
              
-			 
-                    <div id="serchresult">
-					</div>
+		
+                    <div id="serchresult"></div>
 					<div id="laoddetail"></div>
                    
                             

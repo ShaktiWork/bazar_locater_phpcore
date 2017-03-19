@@ -8,10 +8,10 @@
  */
 class DB {
     // Database credentials
-    private $dbHost     = 'shaktisharma.c6grpgunm0b1.us-west-2.rds.amazonaws.com';
-    private $dbUsername = 'shaktisharma';
-    private $dbPassword = 'shaktisharma';
-    private $dbName     = 'bazar_lacater';
+    private $dbHost     = 'localhost';
+    private $dbUsername = 'root';
+    private $dbPassword = 'root';
+    private $dbName     = 'bazarlocater';
     public $db;
     /*
      * Connect to the database and return db connecction
@@ -205,6 +205,7 @@ class DB {
             if($query->rowCount() > 0){
                 $data = $query->fetchAll(PDO::FETCH_ASSOC);
             }
+			
         }
 		
 
@@ -323,14 +324,18 @@ class DB {
     }
 	
 	 public function getRecords ($sql){
-             $data="No Record Found";
+          
             // echo $sql;
              $query = $this->db->prepare($sql);
              $query->execute();
              if($query->rowCount() > 0){
                 $data = $query->fetchAll(PDO::FETCH_ASSOC);
             }
-             return $data;
+			
+        
+		
+
+        return !empty($data)?$data:false;
          }
 		 
 		 public function loginUser($tblName,$email,$password,$canname,$canpassword){

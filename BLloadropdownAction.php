@@ -60,7 +60,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			 
 			 <?php
 			 
-			 }
+			}
 			 
 		     break;
 			 

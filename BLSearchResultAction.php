@@ -32,6 +32,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			$y=0;
 			 $j=0;
 			 
+			 if($result){
 			foreach($result as $arrayValue){       
 			$ratingper="";
 			$review="";
@@ -51,6 +52,9 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
                      echo "user_id==>".$rating[$x]['user_id']."<br>";
 					 /*echo "role_id==>".$rating[$x]['role_id']."<br>";
 					 echo  "rating==>".$rating[$x]['rating']."<br>";*/
+					 if($rating){
+						echo  $totalcountLength;
+						  echo "hello";
 					 for($i=$j;$i<$totalcountLength;){
 						// echo "j value".$j."<br>";
 						// echo "user_id==>".$rating[$x]['user_id']."<br>";
@@ -69,7 +73,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 						 break;
 					 }
 					 $j++;
-					 
+					 } 
 					 
 					 break;
 					} 
@@ -154,6 +158,9 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			 
 			 <?php
 			}
+	}else{
+		echo "No record found.";
+	}
 			  break;
 			 
 			 
@@ -180,7 +187,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			$y=0;
 			 $j=0;
 			
-			 if(sizeof($result)>0){
+			 if($result){
 			foreach($result as $arrayValue){       
 			$ratingper="";
 			$review="";

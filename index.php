@@ -1,5 +1,22 @@
 
 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/loaddropdown.js"></script>
+
+
 <?php
 if(session_id() == '' || !isset($_SESSION)) {
     // session isn't started
@@ -20,30 +37,24 @@ if(session_id() == '' || !isset($_SESSION)) {
 	$role=$_SESSION["role"];
 	 $roleid= $_SESSION["roleid"];
 	 $userid=$_SESSION['userid'];
+		?>
+		 <script>
 		
+	 $( document ).ready(function() {
+          $("#logout").css("display","block");
+		   $("#regis").css("display","none");
+		    $("#login").css("display","none");
+       });
+	 </script>
+		
+		<?php
 	}
 }
-
-
-
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-<title>Untitled Document</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/bootstrap.css" />
-<link rel="stylesheet" href="css/style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/loaddropdown.js"></script>
-
 <script>
 $( document ).ready(function() {
         loadAllCategory();
+		loadBaners();
 		 var userroleid=$("#userroleid").val('<?php echo $roleid  ?>');
 	     var userroleid=$("#user_id").val('<?php echo $userid  ?>');
  });
@@ -60,15 +71,15 @@ function loadAllCategory(){
 	      
 	      var userId=$("#user_id").val();
 		  var roleId=$("#userroleid").val();
-		  
-		  
 		  var url = 'listing?categoty='+categoty+"&type="+'home';
           window.location.href = url;
-		  
-		  
-	  
-   }
-	
+	 }
+	 function loadBaners(){
+		
+		  $.post('BLloadBannerAction', {type:'bannermain'}, function (data){
+	      $("#banners").html(data);
+   });
+	 }
 </script>
  
   <style>
@@ -78,8 +89,7 @@ function loadAllCategory(){
       margin: auto;
   }
   </style>
-     <script>
-	  </script>
+   
    
 </head>
 
@@ -115,8 +125,11 @@ function loadAllCategory(){
       </div>
       <div class="col-lg-2">
       <ul class="right_stle navbar-right">
-        <li class="float"><a href="login" class="sign">Sign in</a></li>
-        <li class="float"><a href="#" class="ragister">Ragister</a></li>
+        <li class="float"><a href="login" class="sign" id="login" style="display:block;margin-top: -8px;"  >Sign in</a></li>
+        <li class="float"><a href="#" class="ragister" id="regis" style="display:block;" >Ragister</a></li>
+			<li class="float"><a href="logout"class="ragister" id="logout" style="display:none">Logout</a></li>
+     
+		
       </ul>
     </div>
   </div>
@@ -135,8 +148,8 @@ function loadAllCategory(){
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner top_stle" role="listbox">
-      <div class="item active slider">
+    <div class="carousel-inner top_stle" role="listbox" id="banners">
+    <!--  <div class="item active slider">
         <img src="img/banner/header-2.jpg" class="img-responsive" height="357px">
       </div>
 
@@ -150,7 +163,7 @@ function loadAllCategory(){
 
       <div class="item slider">
         <img src="img/banner/header-2.jpg" class="img-responsive" height="357px">
-      </div>
+      </div>-->
     </div>
 
     <!-- Left and right controls -->

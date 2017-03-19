@@ -10,18 +10,81 @@
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/style.css" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/jquery/jquery-1.11.3.min.js"></script>
+  <script src="js/loaddropdown.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/messagesjs/js/main.js"></script>
+<script type="text/javascript" src="assets/messagesjs/ohsnap.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+
+
  <script>
+  $( document ).ready(function() {
+	 // $("#commentForm").validate();
+        $('#loginform').validate({
+           
+            rules: {
+                emailid: {
+                    required: true,
+					email: true
+                },
+                password: {
+                    required: true
+                }
+               
+            }
+       
+        });
+		
+		$('#userregister').validate({
+            rules: {
+                emailid: {
+                    required: true,
+					email: true
+                },
+                role: {
+                    required: true
+                },
+				 fname: {
+                    required: true
+                },
+				 lname: {
+                    required: true
+                },
+				 regemailid: {
+                    required: true
+                },
+				 gender: {
+                    required: true
+                },
+				 mobno: {
+                    required: true
+                },
+				 regpassword: {
+                    required: true
+                }
+				,
+				 confirmpass: {
+                    required: true
+                }
+               
+            }
+		
+		
+    });
+		
+  });	
+ 
+ 
     function register() {
    
    var fname = $("#fname").val();
     var lname = $("#lname").val();
-	 var emailid = $("#emailid").val();
+	 var emailid = $("#regemailid").val();
 	  var gender = $("input[name='gender']:checked").val();
 	   var role = $("input[name='role']:checked").val();
 	   var mobno = $("#mobno").val();
-	    var password = $("#password").val();
+	    var password = $("#regpassword").val();
          var confirmpass = $("#confirmpass").val();
 	   
 		roleid="";
@@ -38,30 +101,41 @@
 			roleid=4;
 		}
 		
+		 var isvalid=$('#userregister').valid();
+			 if(isvalid){
      $.post('BLUser', {type:'register',fname:fname,lname:lname,emailid:emailid,gender:gender,mobno:mobno,password:password,role:role,roleid:roleid}, function (data){
-     console.log(data);
-	
+    // console.log(data);
+	alert(data);
+
+	  location.reload();
 
 	});
+			 }
    
 }
 
 function loginUser(){
 	
+	    
 	        var email = $("#emailid").val();
             var pass = $("#password").val();
-			alert(email)
-			alert(pass)
+			
+			 var isvalid=$('#loginform').valid();
+			 if(isvalid){
 			$.post('BLUser', {pass: pass, email: email, type: 'loginUser'}, function (data)
             {
 				if(data =="OK"){
 				window.location.href = 'http://localhost/bazar_locater_phpcore';
 				}
 				else{
-					alert("Please Check Your Username  and Password")
+			alert("Please Check Your Username  and Password")
+					// ohSnap("Category Updated been Added successfully.", {'color':'green'})
+
 				}
                 
             });
+			 
+			 }
 }
 
  </script>
@@ -79,20 +153,18 @@ function loginUser(){
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-button {
-    background-color:#b93101 !important;
-    color: white;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+.error{
+	color:red;
 }
+
   </style>
 </head>
 
 <body>
 			<div class="container-fluid">
+			 
             <div class="container">
+			
             <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <div class="top_stle"><img src="img/logo.png" class="img-responsive" /></div>
@@ -128,6 +200,7 @@ button {
     </div>
   </div>
   			</div>
+			
             	</div>
                 
                 
@@ -140,45 +213,16 @@ button {
   <form>
     <div class="form-group padding2px pa-lef col-lg-2 col-sm-3 col-md-3 col-xs-6">
      <div class="select-style">
- <select class="form-control select_bar" style="width:100%;">
-    <option value="">Select State</option>
-    <option value="Up">Up</option>
-    <option value="Mp">Mp</option>
-    <option value="Uk">Shri Uk</option>
+ <select class="form-control select_bar" id="state" onchange="loadCity();" style="width:100%;">
+   
   </select>
 </div>
     </div>
-    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
+	
+  <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
       <div class="select-style">
-  <select class="form-control select_bar" style="width:100%;">
-    <option value="">Select City</option>
-    <option value="Agra">Agra</option>
-    <option value="Bhind">Bhind</option>
-    <option value="Dehradun">Dehradun</option>
-  </select>
-</div>
-    </div>
-    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-      <div class="select-style">
-  <select class="form-control select_bar" style="width:100%;">
-    <option value="">Select Region</option>
-    <option value="Eastern India">Eastern India</option>
-    <option value="National India">National India</option>
-    <option value="Northeastern India">Northeastern India</option>
-        <option value="Northern">Northern</option>
-  </select>
-</div>
-    </div>
+  <select class="form-control select_bar" id="city"  onchange="loadRegion();" style="width:100%;">
     
-    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-      <div class="select-style">
-  <select class="form-control select_bar" style="width:100%;">
-    <option value="">Category</option>
-    <option value="Bas">Bas</option>
-    <option value="">Cab a Texi</option>
-    <option value="Chemist">Chemist</option>
-    <option value="">Doctor</option>
-    <option value="">Flight</option>
   </select>
 </div>
     </div>
@@ -186,16 +230,30 @@ button {
     
     <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
       <div class="select-style">
-  <select class="form-control select_bar" style="width:100%;">
-    <option value="">Sub Category</option>
-    <option value="Up">Up</option>
-    <option value="Mp">Mp</option>
-    <option value="Uk">Shri Uk</option>
+  <select class="form-control select_bar"  id="region" style="width:100%;">
+    
+  </select>
+</div>
+    </div>
+    
+    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
+      <div class="select-style">
+  <select class="form-control select_bar" id="category" onchange="loadSubCategory();" style="width:100%;">
+    
+  </select>
+</div>
+    </div>
+   
+    
+    <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
+      <div class="select-style">
+  <select class="form-control select_bar"  id= "subcategory"style="width:100%;">
+    
   </select>
 </div>
     </div>
      <div class="form-group padding2px col-lg-2 col-sm-3 col-md-3 col-xs-6">
-    <input class="btn btn-custom font_search" value="SEARCH" type="submit">
+     <button class="btn btn-custom font_search" onclick="loadListing()" value="SEARCH" type="button">SEARCH
     </div>
   </form>
   </div>
@@ -207,19 +265,20 @@ button {
 </div>
 		</div></div>
         
+		
 
   			<div class="container-fluid fluid_clr">
             <div class="container">
-			<form>
+			<form id="loginform" name="loginform">
             <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
             <div class="login">Login</div>
             <div class="email">Email Addresse*</div>
-             <input type="text" name="search" name="emailid" id="emailid" class="search_box" placeholder=""></div>
+             <input type="text"  name="emailid" id="emailid" class="search_box" placeholder=""></div>
 	
 		 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
             <div class="email pass_search passw">Password*</div>
-             <input type="text" name="search" name="password" id="password" class="search_box" placeholder=""></div>
+             <input type="text" name="password" id="password" class="search_box" placeholder=""></div>
           
              
         <div class="col-lg-2 col-sm-2 col-md-2 col-xs-6">
@@ -233,7 +292,9 @@ button {
 
 
       </div>
+	  </form>
       	</div>
+		  
             </div>
              
             <div class="container-fluid conti_ner">
@@ -271,19 +332,19 @@ button {
             <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			<div class="email">First Name*</div>
-             <input type="text" name="search" id="fname" class="search_box" placeholder="">
+             <input type="text" name="fname" id="fname" class="search_box" placeholder="">
              </div>
 	
 		    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="email pass_search">Last Name*</div>
-             <input type="text" name="search" id="lname" class="search_box" placeholder=""></div>
+             <input type="text" name="lname" id="lname" class="search_box" placeholder=""></div>
              </div>
              
              <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Email Address*</div>
-             <input type="text" name="search" id="emailid" class="search_box" placeholder="">
+             <input type="text" name="regemailid" id="regemailid" class="search_box" placeholder="">
              </div>
 	
 		 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -305,14 +366,14 @@ button {
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Enter your Mobile number*</div>
-             <input type="text" name="search" id="mobno" class="search_box" placeholder="">
+             <input type="text" name="mobno" id="mobno" class="search_box" placeholder="">
              </div>
               
         
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Please enter the verification code*</div>
-             <input type="text" name="search"id="varificationcode" class="search_box" placeholder="">
+             <input type="text" name="varificationcode"id="varificationcode" class="search_box" placeholder="">
              </div>
              </div>  
                
@@ -320,14 +381,14 @@ button {
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
             <div class="email">Enter Password*</div>
-             <input type="text" name="search" id="password" class="search_box" placeholder="">
+             <input type="text" name="regpassword" id="regpassword" class="search_box" placeholder="">
              </div>
               
         
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="login"></div>
-            <div class="email">Confarm Password*</div>
-             <input type="text" name="search" id="confirmpass" class="search_box" placeholder="">
+            <div class="email">Confirm Password*</div>
+             <input type="text" name="confirmpass" id="confirmpass" class="search_box" placeholder="">
              </div>
              </div><br />
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bottom_stle">

@@ -16,7 +16,7 @@ Code licensed under the BSD License: http://www.redips.net/license/
  * - message is written with the following format: [d/M/Y:H:i:s] (script name) message
  */
 class Logging {
-	// declare log file and file pointer as private properties
+	// declare log file and file pointe as private properties
 	private $log_file, $fp;
 	// set log file (path and name)
 	public function lfile($path) {

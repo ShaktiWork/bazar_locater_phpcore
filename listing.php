@@ -201,13 +201,16 @@ button {
    
    
    function loaddetails(userId,roleId,categoty){
-	   
+	  
 	      $("#searcheduserroleid").val(roleId);
 	      $("#searchuser_id").val(userId);
-	   
+	    var logedinUserId='<?php echo $userid  ?>'
+		
+		
+		
 	    $("#userroleid").val('<?php echo $roleid  ?>');
 	    $("#user_id").val('<?php echo $userid  ?>');
-	    $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId,categoty:categoty}, function (data){
+	    $.post('BLUserDetail', {type:'loadDetail',userId: userId,roleId:roleId,categoty:categoty,logedinUserId:logedinUserId}, function (data){
          console.log(data);
 		 
 	  $("#serchresult").hide();

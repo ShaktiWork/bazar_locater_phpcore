@@ -65,9 +65,51 @@ class BLUserDetailImpl extends Exception {
 
 	
 	
-	
-	
-	
+	function checkRating($userId,$roleid,$ratedbyid){
+		$log = new Logging();   
+        $log->lfile('mylog.txt');
+        $db = new DB(); 
+	  try{		
+	    $query= "Select *from t_rat where  userid='$userId' and '$roleid' and  ratedbyid='$ratedbyid' ";
+          $records = $db->getRecords($query);
+	      
+	      if($records){
+			  $result=(array_values($records));
+		  return $result;
+	     }
+	     else{
+		  return false;
+	    }
+	}catch(Exception $e){
+		//echo ;
+		$log->lwrite($e->getMessage());
+            }
+			$log->lclose();
+  }
+  
+  
+  
+  	function checkRatingByUser(){
+		$log = new Logging();   
+        $log->lfile('mylog.txt');
+        $db = new DB(); 
+	  try{		
+	      $query= "Select *from t_rat where ratedbyid=20";
+          $records = $db->getRecords($query);
+	     
+	      if($records){
+			   $result=(array_values($records));
+		  return $result;
+	     }
+	     else{
+		  return false;
+	    }
+	}catch(Exception $e){
+		//echo ;
+		$log->lwrite($e->getMessage());
+            }
+			$log->lclose();
+  }
 }
 
 ?>

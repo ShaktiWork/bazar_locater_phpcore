@@ -33,10 +33,10 @@ if(session_id() == '' || !isset($_SESSION)) {
 	}
 	else{
 		$email=$_SESSION["email"];
-	 $userid=$_SESSION["userid"];
-	$role=$_SESSION["role"];
-	 $roleid= $_SESSION["roleid"];
-	 $userid=$_SESSION['userid'];
+	    $userid=$_SESSION["userid"];
+	    $role=$_SESSION["role"];
+	    $roleid= $_SESSION["roleid"];
+	    $userid=$_SESSION['userid'];
 		?>
 		 <script>
 		
@@ -57,6 +57,7 @@ $( document ).ready(function() {
 		loadBaners();
 		 var userroleid=$("#userroleid").val('<?php echo $roleid  ?>');
 	     var userroleid=$("#user_id").val('<?php echo $userid  ?>');
+		
  });
 	   
 function loadAllCategory(){

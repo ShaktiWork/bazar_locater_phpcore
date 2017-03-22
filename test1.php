@@ -19,48 +19,37 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
 			 $qualityrate="";
 			
 			$ratingresult=$blLoad->checkRating($userId,$roleId,$_POST['logedinUserId']);
-			$ratingresultbyUserid=$blLoad->checkRatingByUser($userId,$roleId);
-			if($ratingresultbyUserid){
-				$username = array_column($ratingresultbyUserid, 'name');
-				echo $username[0];
-			}
-			$result=$blLoad->loadResult($userId,$roleId,$categoty);
 			
-			$user_roleid=array_map(function($element){return $element['user_userid'];}, $result);
-			$user_userid=array_map(function($element){return $element['user_roleid'];}, $result);
-			$user_category=array_map(function($element){return $element['user_category'];}, $result);
-			$user_shopname=array_map(function($element){return $element['user_shopname'];}, $result);$user_shop_mobile=array_map(function($element){return $element['user_shop_mobile'];}, $result);
-			$user_shop_email=array_map(function($element){return $element['user_shop_email'];}, $result);
-			$user_shop_web=array_map(function($element){return $element['user_shop_web'];}, $result);
-			$imagepath=array_map(function($element){return $element['imagepath'];}, $result);
-			//print_r($value);
-			//$user_userid = array_column($result, 'user_userid');
-			/*$user_roleid = array_column($result, 'user_roleid');
+			$ratingresultbyUserid=$blLoad->checkRatingByUser($userId,$roleId);
+			
+			$result=$blLoad->loadResult($userId,$roleId,$categoty);
+			$user_userid = array_column($result, 'user_userid');
+			$user_roleid = array_column($result, 'user_roleid');
 			$user_category = array_column($result, 'user_category');
 			$user_shopname = array_column($result, 'user_shopname');
 			$user_shop_mobile = array_column($result, 'user_shop_mobile');
 			$user_shop_email = array_column($result, 'user_shop_email');
 			$user_shop_web = array_column($result, 'user_shop_web');
-			$imagepath = array_column($result, 'imagepath');*/
+			$imagepath = array_column($result, 'imagepath');
 			if($ratingresult)
 			foreach($ratingresult as $arrayValue){ 
+		// $arrayValue['ratedbyid'];
 			if($arrayValue['ratedbyid']==$_POST['logedinUserId'])
 			{
+				$commentByUser="true";
 				?>
 				<script>
 				$("#placeReviewdiv").hide();
 				</script>
 				<?php
-				$commentByUser="true";
 				$speedrate=$arrayValue['speedrate'];
 				$pricerate=$arrayValue['pricerate'];
 				$qualityrate=$arrayValue['qualityrate'];
+				break;
 				
 			}else{
 				$commentByUser="false";
 			}
-			
-			
 			}
 		
 		   ?>
@@ -179,35 +168,31 @@ for (i = 0; i < acc.length; i++) {
 <input type="hidden" id="speedrate" value="">
 <input type="hidden" id="qualityrate" value="">
 <input type="hidden" id="pricerate" value="">
-  		<?php 
-		
-		
-			?>
-			
+  		
 			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 riht">
         <div class="bener_im"><img src="img/banner/header-2.jpg" class="img-responsive img_2" /></div>
         <div class="cabs">Cabs</div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 leave">
+	
 			<?php 
-			if($ratingresult){ ?>
+			if($ratingresult){  ?>
+        <div class="bottm_box">Review</div>
+        	<?php 
 			
-				 <div class="bottm_box">Review</div>
-        
-			<?php
 				foreach($ratingresult as $arrayValue){ 
-				
-			?>
-       	
-        
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pdd">
+					
 		
+		//\if($commentByUser == "true"){
+			?>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pdd">
         <div class="">Speed</div>
         <div class="margi_tp">Quality </div>
         <div class="margi_tp">Price</div>
 
         </div>
         
-        <ul data-id = "<?php echo round($arrayValue['speedrate']); ?>" data-rating ="<?php echo round($arrayValue['speedrate']); ?>">
+        
+		 <ul data-id = "<?php round($arrayValue['speedrate']); ?>" data-rating ="<?php round($arrayValue['speedrate']); ?>">
              
 			  <?php 
                 for($i=1; $i<=5; $i++) 
@@ -225,7 +210,7 @@ for (i = 0; i < acc.length; i++) {
 
 			</ul>
 		
-		 <ul data-id = "<?php  echo round($arrayValue['pricerate']); ?>" data-rating ="<?php echo round($arrayValue['pricerate']); ?>">
+		 <ul data-id = "<?php round($arrayValue['pricerate']); ?>" data-rating ="<?php round($arrayValue['pricerate']); ?>">
              
 			  <?php 
                 for($i=1; $i<=5; $i++) 
@@ -243,7 +228,7 @@ for (i = 0; i < acc.length; i++) {
 
 			</ul>
 			
-			  <ul data-id = "<?php  echo round($arrayValue['qualityrate']); ?>" data-rating ="<?php  echo round($arrayValue['qualityrate']); ?>">
+			 <ul data-id = "<?php  echo round($arrayValue['qualityrate']); ?>" data-rating ="<?php  echo round($arrayValue['qualityrate']); ?>">
              
 			  <?php 
                 for($i=1; $i<=5; $i++) 
@@ -256,20 +241,31 @@ for (i = 0; i < acc.length; i++) {
                 ?>
                     <li class="<?php echo $selected; ?>">&#9733;</li>  
                 <?php 
-                }
-				}				
+                }  
                 ?>			   
 
 			</ul>
+	
+            	<?php
 			
-			<?php
+		
+			
 		}
+					}
 		?>
+			
         
 		
         
-          <div id="placeReviewdiv">
-          <div class="bottm_box">Leave a Review</div>
+		</div>
+        </div>
+			
+        
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 riht" id="placeReviewdiv">
+        <div class="bener_im"><img src="img/banner/header-2.jpg" class="img-responsive img_2" /></div>
+        <div class="cabs">Cabs</div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 leave">
+        <div class="bottm_box">Leave a Review</div>
         
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pdd">
         <div class="">Speed</div>
@@ -330,11 +326,8 @@ for (i = 0; i < acc.length; i++) {
 	</div>
     <div class="forget">Forget Password?</div>
     </div>
-	</div>
-        
 		</div>
         </div>
-		
         <div class="col-lg-2 col-md-2 col-sm-2 col-12">
         <div class=""><img src="img/add/add1.png" class="img-responsive img_3" /></div>
         

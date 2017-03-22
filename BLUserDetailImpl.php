@@ -70,7 +70,7 @@ class BLUserDetailImpl extends Exception {
         $log->lfile('mylog.txt');
         $db = new DB(); 
 	  try{		
-	    $query= "Select *from t_rat where  userid='$userId' and '$roleid' and  ratedbyid='$ratedbyid' ";
+	    $query= "Select *from t_rat where  userid='$userId' and '$roleid' ";
           $records = $db->getRecords($query);
 	      
 	      if($records){
@@ -89,12 +89,12 @@ class BLUserDetailImpl extends Exception {
   
   
   
-  	function checkRatingByUser(){
+  	function checkRatingByUser($userId,$roleId){
 		$log = new Logging();   
         $log->lfile('mylog.txt');
         $db = new DB(); 
 	  try{		
-	      $query= "Select *from t_rat where ratedbyid=20";
+	     $query= "Select *from t_rat where userid='$userId' and roleId='$roleId'";
           $records = $db->getRecords($query);
 	     
 	      if($records){
